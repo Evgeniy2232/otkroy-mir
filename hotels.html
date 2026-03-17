@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отели - Открой мир</title>
+    <link rel="stylesheet" href="hotels.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107732237', 'ym');
+
+    ym(107732237, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107732237" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-compass"></i>
+                Открой мир
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#">Услуги <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trains.html"><i class="fas fa-train"></i> Ж/Д билеты</a>
+                        <a href="flights.html"><i class="fas fa-plane"></i> Авиабилеты</a>
+                        <a href="hotels.html"><i class="fas fa-hotel"></i> Отели</a>
+                        <a href="tours.html"><i class="fas fa-map-marked-alt"></i> Туры</a>
+                        <a href="buses.html"><i class="fas fa-bus"></i> Автобусы</a>
+                    </div>
+                </li>
+                <li><a href="destinations.html">Направления</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="login.html">Войти</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <section class="service-hero">
+            <div class="service-hero-content">
+                <h1>Отели</h1>
+                <p>Подберите идеальное жилье для вашего путешествия. От бюджетных до роскошных отелей по всему миру.</p>
+            </div>
+        </section>
+
+        <section class="service-details">
+            <div class="service-info">
+                <div class="service-image">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/5234364/pub_63601a72288a8f460a686e05_6360257b6af2fa0189daf791/scale_1200" alt="Отель">
+                </div>
+                <div class="service-description">
+                    <h2>Комфортное проживание в любой точке мира</h2>
+                    <p>Мы предлагаем широкий выбор отелей, апартаментов и других вариантов проживания по всему миру. Независимо от вашего бюджета и предпочтений, вы найдете идеальное жилье для вашего путешествия.</p>
+                    <p>Наша система позволяет сравнивать цены, читать отзывы реальных гостей и бронировать проживание с гарантией лучшей цены. Мы сотрудничаем с тысячами отелей по всему миру.</p>
+                    <p>От уютных гостевых домов до роскошных пятизвездочных отелей - у нас есть варианты для любого типа путешественников.</p>
+                </div>
+            </div>
+
+            <div class="service-features">
+                <h2 class="section-title">Преимущества</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fas fa-search"></i>
+                        <h3>Широкий выбор</h3>
+                        <p>Тысячи отелей по всему миру</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Лучшие цены</h3>
+                        <p>Гарантия лучшей стоимости</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-star"></i>
+                        <h3>Реальные отзывы</h3>
+                        <p>Честные оценки от гостей</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Безопасное бронирование</h3>
+                        <p>Защита ваших данных и платежей</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-section">
+                <h2 class="section-title">Найти отель</h2>
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="destination">Направление</label>
+                        <input type="text" id="destination" placeholder="Город, регион или отель" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="check-in">Заезд</label>
+                            <input type="date" id="check-in" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out">Выезд</label>
+                            <input type="date" id="check-out" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rooms">Номера</label>
+                            <select id="rooms">
+                                <option value="1">1 номер</option>
+                                <option value="2">2 номера</option>
+                                <option value="3">3 номера</option>
+                                <option value="4">4 номера</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Гости</label>
+                            <select id="guests">
+                                <option value="1">1 взрослый</option>
+                                <option value="2">2 взрослых</option>
+                                <option value="3">3 взрослых</option>
+                                <option value="4">4 взрослых</option>
+                                <option value="family">Семья (2 взрослых + 2 детей)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="cta-button">Найти отели</button>
+                </form>
+            </div>
+
+            <!-- Новый раздел с городами -->
+            <div class="cities-section">
+                <h2 class="section-title">Популярные направления для отдыха</h2>
+                <div class="cities-grid">
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/736x/68/af/2e/68af2e15f7cdd5b33dba273ff41cd6c1.jpg" alt="Санкт-Петербург">
+                        </div>
+                        <div class="city-info">
+                            <h3>Санкт-Петербург</h3>
+                            <p class="price">от 2 500 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/736x/65/92/1c/65921c70ca3f4ae7d803e10c375254cc.jpg" alt="Казань">
+                        </div>
+                        <div class="city-info">
+                            <h3>Казань</h3>
+                            <p class="price">от 2 200 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://avatars.mds.yandex.net/get-altay/16325379/2a000001993ce6b593afbabf6a5d72f207d8/orig" alt="Сочи">
+                        </div>
+                        <div class="city-info">
+                            <h3>Сочи</h3>
+                            <p class="price">от 3 800 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://www.aeroflot.ru/media/aflfiles/travelguide/ru/svx/svx-4.jpg" alt="Екатеринбург">
+                        </div>
+                        <div class="city-info">
+                            <h3>Екатеринбург</h3>
+                            <p class="price">от 2 100 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://palomnik.nne.ru/wp-content/uploads/2023/02/Chkalovskaya_otkrytie_bezlogo.jpg" alt="Нижний Новгород">
+                        </div>
+                        <div class="city-info">
+                            <h3>Нижний Новгород</h3>
+                            <p class="price">от 1 900 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://pic.rutubelist.ru/video/2025-05-09/22/bb/22bb152d5adeb08b9f899848e4587eae.jpg" alt="Новосибирск">
+                        </div>
+                        <div class="city-info">
+                            <h3>Новосибирск</h3>
+                            <p class="price">от 2 300 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://sarinform.ru/assets/images/resources/205574/9samara.jpg" alt="Самара">
+                        </div>
+                        <div class="city-info">
+                            <h3>Самара</h3>
+                            <p class="price">от 1 800 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://don-plaza.ru/upload/iblock/61d/lvb77ryhs40dxr00pgdr9d3l559cl01s.jpg" alt="Ростов-на-Дону">
+                        </div>
+                        <div class="city-info">
+                            <h3>Ростов-на-Дону</h3>
+                            <p class="price">от 2 000 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://cdn.culture.ru/images/e767157a-5487-52de-9eab-8ec54a97f505" alt="Уфа">
+                        </div>
+                        <div class="city-info">
+                            <h3>Уфа</h3>
+                            <p class="price">от 1 700 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://img.geliophoto.com/krsk2020/26_krsk2020.jpg" alt="Красноярск">
+                        </div>
+                        <div class="city-info">
+                            <h3>Красноярск</h3>
+                            <p class="price">от 2 400 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i01.fotocdn.net/s217/b2a5f9913e3f1e09/public_pin_l/2965668718.jpg" alt="Пермь">
+                        </div>
+                        <div class="city-info">
+                            <h3>Пермь</h3>
+                            <p class="price">от 1 900 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Благовещенский_кафедральный_собор.jpg/1600px-Благовещенский_кафедральный_собор.jpg" alt="Воронеж">
+                        </div>
+                        <div class="city-info">
+                            <h3>Воронеж</h3>
+                            <p class="price">от 1 600 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=bbc8b22341919d31b4ffd8d105c3b29d_l-4345430-images-thumbs&n=13" alt="Волгоград">
+                        </div>
+                        <div class="city-info">
+                            <h3>Волгоград</h3>
+                            <p class="price">от 1 500 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_67880fe7039c2e7621b82359_67881273039c2e7621bbf040/scale_1200" alt="Краснодар">
+                        </div>
+                        <div class="city-info">
+                            <h3>Краснодар</h3>
+                            <p class="price">от 2 200 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=cd68a4e817b1c2132ada77fd277fb719_l-10498726-images-thumbs&n=13" alt="Саратов">
+                        </div>
+                        <div class="city-info">
+                            <h3>Саратов</h3>
+                            <p class="price">от 1 600 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://golvestnik.ru/wp-content/uploads/2021/10/тюмень-сверху-мост-влюбленных-регион-область.jpg" alt="Тюмень">
+                        </div>
+                        <div class="city-info">
+                            <h3>Тюмень</h3>
+                            <p class="price">от 2 100 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://s1.stc.all.kpcdn.net/russia/wp-content/uploads/2024/10/Mihailo-Arhangelskij-sobor-2-Izhevsk.jpg" alt="Ижевск">
+                        </div>
+                        <div class="city-info">
+                            <h3>Ижевск</h3>
+                            <p class="price">от 1 500 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://sdelanounas.ru/i/a/w/1/f_aW1nLmdlbGlvcGhvdG8uY29tL2JybjIwMjEvYnJuMjAyMV83Ny5qcGc_X19pZD0xNDQ0MTg=.jpeg" alt="Барнаул">
+                        </div>
+                        <div class="city-info">
+                            <h3>Барнаул</h3>
+                            <p class="price">от 1 800 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://imcdn.bolshayastrana.com/1200x00/BS_f87c6c4e86e9baa5d89fed12bd02c61c0efb3e6a98c745599c5b06a123ceb2d9.jpeg" alt="Иркутск">
+                        </div>
+                        <div class="city-info">
+                            <h3>Иркутск</h3>
+                            <p class="price">от 2 300 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://ic.pics.livejournal.com/matveychev_oleg/27303223/30994101/30994101_1000.jpg" alt="Ульяновск">
+                        </div>
+                        <div class="city-info">
+                            <h3>Ульяновск</h3>
+                            <p class="price">от 1 600 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=fd6893c7561bea56df8f60773e0bb8ff_l-3524127-images-thumbs&n=13" alt="Хабаровск">
+                        </div>
+                        <div class="city-info">
+                            <h3>Хабаровск</h3>
+                            <p class="price">от 2 500 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://cdn.culture.ru/images/ec5ef501-3cb7-5683-991d-5b097155bca6" alt="Ярославль">
+                        </div>
+                        <div class="city-info">
+                            <h3>Ярославль</h3>
+                            <p class="price">от 1 900 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://cdni.russiatoday.com/rbthmedia/images/2022.07/original/62e4df5a42495f019e6359d7.jpg" alt="Владивосток">
+                        </div>
+                        <div class="city-info">
+                            <h3>Владивосток</h3>
+                            <p class="price">от 2 800 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://omsk.land/wp-content/uploads/2018/06/Gorod-solntsa-Andrej-Kudryavtsev-1024x684.jpg" alt="Омск">
+                        </div>
+                        <div class="city-info">
+                            <h3>Омск</h3>
+                            <p class="price">от 1 700 ₽ / ночь</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Открой мир</h3>
+                <p>Мы помогаем путешественникам открывать мир с новой стороны, создавая незабываемые впечатления и уникальные маршруты.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Услуги</h3>
+                <ul class="footer-links">
+                    <li><a href="trains.html">Ж/Д билеты</a></li>
+                    <li><a href="flights.html">Авиабилеты</a></li>
+                    <li><a href="hotels.html">Отели</a></li>
+                    <li><a href="tours.html">Туры</a></li>
+                    <li><a href="buses.html">Автобусы</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Поддержка</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Центр помощи</a></li>
+                    <li><a href="#">Свяжитесь с нами</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Путешественников, 15</li>
+                    <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                    <li><i class="fas fa-envelope"></i> info@wanderlust.ru</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Открой мир. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        document.querySelector('.booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Запрос на поиск отелей отправлен! Мы найдем для вас лучшие варианты.');
+        });
+
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('check-in').min = today;
+        document.getElementById('check-out').min = today;
+
+        document.getElementById('check-in').addEventListener('change', function() {
+            const checkInDate = new Date(this.value);
+            const nextDay = new Date(checkInDate);
+            nextDay.setDate(nextDay.getDate() + 1);
+            document.getElementById('check-out').min = nextDay.toISOString().split('T')[0];
+            
+            const checkOutDate = new Date(document.getElementById('check-out').value);
+            if (checkOutDate < nextDay) {
+                document.getElementById('check-out').value = nextDay.toISOString().split('T')[0];
+            }
+        });
+    </script>
+</body>
+</html>

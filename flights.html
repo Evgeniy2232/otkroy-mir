@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авиабилеты - Открой мир</title>
+    <link rel="stylesheet" href="flights.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107732237', 'ym');
+
+    ym(107732237, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107732237" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-compass"></i>
+                Открой мир
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#">Услуги <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trains.html"><i class="fas fa-train"></i> Ж/Д билеты</a>
+                        <a href="flights.html"><i class="fas fa-plane"></i> Авиабилеты</a>
+                        <a href="hotels.html"><i class="fas fa-hotel"></i> Отели</a>
+                        <a href="tours.html"><i class="fas fa-map-marked-alt"></i> Туры</a>
+                        <a href="buses.html"><i class="fas fa-bus"></i> Автобусы</a>
+                    </div>
+                </li>
+                <li><a href="destinations.html">Направления</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="login.html">Войти</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <section class="service-hero">
+            <div class="service-hero-content">
+                <h1>Авиабилеты</h1>
+                <p>Найдите идеальные рейсы по всему миру. Сравнивайте цены и бронируйте выгодно с нашим сервисом.</p>
+            </div>
+        </section>
+
+        <section class="service-details">
+            <div class="service-info">
+                <div class="service-image">
+                    <img src="https://masterpiecer-images.s3.yandex.net/d9ed91208e6011eea1c12656ee3db587:upscaled" alt="Самолет">
+                </div>
+                <div class="service-description">
+                    <h2>Путешествуйте по всему миру</h2>
+                    <p>Наша система поиска авиабилетов позволяет найти лучшие предложения от сотен авиакомпаний. Мы сравниваем цены и условия перелета, чтобы вы могли выбрать оптимальный вариант для вашего путешествия.</p>
+                    <p>Бронируйте билеты на рейсы в любую точку мира с гарантией лучшей цены. Мы предлагаем гибкие условия бронирования, возможность выбора мест и дополнительные услуги.</p>
+                    <p>С нами вы можете быть уверены в надежности перелета и качестве обслуживания. Мы работаем только с проверенными авиакомпаниями и партнерами.</p>
+                </div>
+            </div>
+
+            <div class="service-features">
+                <h2 class="section-title">Преимущества</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="fas fa-search-dollar"></i>
+                        <h3>Сравнение цен</h3>
+                        <p>Сравнивайте предложения от разных авиакомпаний</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-globe-americas"></i>
+                        <h3>Международные рейсы</h3>
+                        <p>Билеты в любую точку мира</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Безопасность</h3>
+                        <p>Гарантия безопасных и надежных перелетов</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-concierge-bell"></i>
+                        <h3>Дополнительные услуги</h3>
+                        <p>Страхование, трансферы и многое другое</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-section">
+                <h2 class="section-title">Найти авиабилеты</h2>
+                <form class="booking-form">
+                    <div class="flight-type">
+                        <label>
+                            <input type="radio" name="flight-type" value="one-way" checked> В одну сторону
+                        </label>
+                        <label>
+                            <input type="radio" name="flight-type" value="round-trip"> Туда и обратно
+                        </label>
+                        <label>
+                            <input type="radio" name="flight-type" value="multi-city"> Сложный маршрут
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="from">Откуда</label>
+                            <input type="text" id="from" placeholder="Город или аэропорт вылета" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="to">Куда</label>
+                            <input type="text" id="to" placeholder="Город или аэропорт назначения" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departure">Дата вылета</label>
+                            <input type="date" id="departure" required>
+                        </div>
+                        <div class="form-group" id="return-date-group">
+                            <label for="return">Дата возвращения</label>
+                            <input type="date" id="return">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="passengers">Пассажиры</label>
+                            <select id="passengers">
+                                <option value="1">1 взрослый</option>
+                                <option value="2">2 взрослых</option>
+                                <option value="3">3 взрослых</option>
+                                <option value="4">4 взрослых</option>
+                                <option value="family">Семья (2 взрослых + 2 детей)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="class">Класс</label>
+                            <select id="class">
+                                <option value="economy">Эконом</option>
+                                <option value="premium">Премиум-эконом</option>
+                                <option value="business">Бизнес</option>
+                                <option value="first">Первый</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="cta-button">Найти билеты</button>
+                </form>
+            </div>
+
+            <!-- Новый раздел с городами -->
+            <div class="cities-section">
+                <h2 class="section-title">Популярные направления из Москвы</h2>
+                <div class="cities-grid">
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/51/22/cd/5122cd0d9565099bb4b322e70c0a9d65.jpg" alt="Стамбул">
+                        </div>
+                        <div class="city-info">
+                            <h3>Стамбул</h3>
+                            <p class="route">Москва → Стамбул</p>
+                            <p class="price">от 8 500 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/736x/2e/30/fd/2e30fd25b46caa811e1ded84cdca3120.jpg" alt="Париж">
+                        </div>
+                        <div class="city-info">
+                            <h3>Париж</h3>
+                            <p class="route">Москва → Париж</p>
+                            <p class="price">от 12 300 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/cc/cf/74/cccf74efb13cff0251b8b54569961fe2.jpg" alt="Дубай">
+                        </div>
+                        <div class="city-info">
+                            <h3>Дубай</h3>
+                            <p class="route">Москва → Дубай</p>
+                            <p class="price">от 15 800 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/72/fb/df/72fbdfa013d8fa9f9696181daf6b294b.jpg" alt="Бангкок">
+                        </div>
+                        <div class="city-info">
+                            <h3>Бангкок</h3>
+                            <p class="route">Москва → Бангкок</p>
+                            <p class="price">от 18 200 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/1e/0b/bf/1e0bbf90534371663cac5d42f8d7e0fc.jpg" alt="Токио">
+                        </div>
+                        <div class="city-info">
+                            <h3>Токио</h3>
+                            <p class="route">Москва → Токио</p>
+                            <p class="price">от 25 500 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/c1/0e/1b/c10e1bb957a3379dbfc18f2c6b42799b.jpg" alt="Нью-Йорк">
+                        </div>
+                        <div class="city-info">
+                            <h3>Нью-Йорк</h3>
+                            <p class="route">Москва → Нью-Йорк</p>
+                            <p class="price">от 32 000 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/736x/d3/5f/0d/d35f0d7b405b087bb1cdf71f0989820c.jpg" alt="Лондон">
+                        </div>
+                        <div class="city-info">
+                            <h3>Лондон</h3>
+                            <p class="route">Москва → Лондон</p>
+                            <p class="price">от 11 700 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/736x/34/a8/b9/34a8b96ee490128a9e249bf70ca17227.jpg" alt="Рим">
+                        </div>
+                        <div class="city-info">
+                            <h3>Рим</h3>
+                            <p class="route">Москва → Рим</p>
+                            <p class="price">от 10 900 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/4b/76/8d/4b768dd57b1ac4282fe145f6d71fc616.jpg" alt="Прага">
+                        </div>
+                        <div class="city-info">
+                            <h3>Прага</h3>
+                            <p class="route">Москва → Прага</p>
+                            <p class="price">от 9 800 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/f4/dd/06/f4dd06bbc3cf1f45517cb3df46c7be9a.jpg" alt="Амстердам">
+                        </div>
+                        <div class="city-info">
+                            <h3>Амстердам</h3>
+                            <p class="route">Москва → Амстердам</p>
+                            <p class="price">от 10 200 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/02/cb/09/02cb0918de9dff8dd2e894002a612cf4.jpg" alt="Барселона">
+                        </div>
+                        <div class="city-info">
+                            <h3>Барселона</h3>
+                            <p class="route">Москва → Барселона</p>
+                            <p class="price">от 11 500 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/b0/f5/7c/b0f57c31fd6a2ff4b25847984ba12848.jpg" alt="Токио">
+                        </div>
+                        <div class="city-info">
+                            <h3>Минск</h3>
+                            <p class="route">Москва → Минск</p>
+                            <p class="price">от 7 200 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/736x/e8/ba/fb/e8bafb65197fa6567be4abdc35a9b50c.jpg" alt="Афины">
+                        </div>
+                        <div class="city-info">
+                            <h3>Афины</h3>
+                            <p class="route">Москва → Афины</p>
+                            <p class="price">от 9 500 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/95/e7/6c/95e76ce05f2b5ee97e668c32ca0fd93f.jpg" alt="Сочи">
+                        </div>
+                        <div class="city-info">
+                            <h3>Сочи</h3>
+                            <p class="route">Москва → Сочи</p>
+                            <p class="price">от 5 800 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/8a/0f/48/8a0f4800a620f27380798d59b7e2686c.jpg" alt="Краснодар">
+                        </div>
+                        <div class="city-info">
+                            <h3>Краснодар</h3>
+                            <p class="route">Москва → Краснодар</p>
+                            <p class="price">от 4 900 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/736x/68/af/2e/68af2e15f7cdd5b33dba273ff41cd6c1.jpg" alt="Санкт-Петербург">
+                        </div>
+                        <div class="city-info">
+                            <h3>Санкт-Петербург</h3>
+                            <p class="route">Москва → Санкт-Петербург</p>
+                            <p class="price">от 3 500 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/736x/65/92/1c/65921c70ca3f4ae7d803e10c375254cc.jpg" alt="Казань">
+                        </div>
+                        <div class="city-info">
+                            <h3>Казань</h3>
+                            <p class="route">Москва → Казань</p>
+                            <p class="price">от 4 200 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/eb/6f/18/eb6f181d0c389a6d94e741b5457fa3eb.jpg" alt="Екатеринбург">
+                        </div>
+                        <div class="city-info">
+                            <h3>Екатеринбург</h3>
+                            <p class="route">Москва → Екатеринбург</p>
+                            <p class="price">от 5 100 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/736x/f2/64/a7/f264a70dc4604be8e29e26937401bca4.jpg" alt="Новосибирск">
+                        </div>
+                        <div class="city-info">
+                            <h3>Новосибирск</h3>
+                            <p class="route">Москва → Новосибирск</p>
+                            <p class="price">от 6 800 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/736x/b2/20/46/b220460210279d9cdae528e76c20404b.jpg" alt="Владивосток">
+                        </div>
+                        <div class="city-info">
+                            <h3>Владивосток</h3>
+                            <p class="route">Москва → Владивосток</p>
+                            <p class="price">от 12 500 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/64/05/56/640556207c125cdf21ababaa3bcd8e28.jpg" alt="Брест">
+                        </div>
+                        <div class="city-info">
+                            <h3>Брест</h3>
+                            <p class="route">Москва → Брест</p>
+                            <p class="price">от 6 500 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/45/1d/59/451d594f189a2b34ef651130e55352d2.jpg" alt="Астана">
+                        </div>
+                        <div class="city-info">
+                            <h3>Астана</h3>
+                            <p class="route">Москва → Астана</p>
+                            <p class="price">от 8 900 ₽</p>
+                        </div>
+                    </div>
+                    <div class="city-card">
+                        <div class="city-image">
+                            <img src="https://i.pinimg.com/1200x/a9/ed/1c/a9ed1cd34088f45eb6a0033159c07160.jpg" alt="Ташкент">
+                        </div>
+                        <div class="city-info">
+                            <h3>Ташкент</h3>
+                            <p class="route">Москва → Ташкент</p>
+                            <p class="price">от 9 300 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Открой мир</h3>
+                <p>Мы помогаем путешественникам открывать мир с новой стороны, создавая незабываемые впечатления и уникальные маршруты.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Услуги</h3>
+                <ul class="footer-links">
+                    <li><a href="trains.html">Ж/Д билеты</a></li>
+                    <li><a href="flights.html">Авиабилеты</a></li>
+                    <li><a href="hotels.html">Отели</a></li>
+                    <li><a href="tours.html">Туры</a></li>
+                    <li><a href="buses.html">Автобусы</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Поддержка</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Центр помощи</a></li>
+                    <li><a href="#">Свяжитесь с нами</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Путешественников, 15</li>
+                    <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                    <li><i class="fas fa-envelope"></i> info@wanderlust.ru</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Открой мир. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        document.querySelector('.booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Запрос на поиск авиабилетов отправлен! Мы найдем для вас лучшие варианты.');
+        });
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('departure').min = today;
+        document.getElementById('return').min = today;
+
+        const flightTypeRadios = document.querySelectorAll('input[name="flight-type"]');
+        const returnDateGroup = document.getElementById('return-date-group');
+        
+        flightTypeRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'one-way') {
+                    returnDateGroup.style.display = 'none';
+                } else {
+                    returnDateGroup.style.display = 'block';
+                }
+            });
+        });
+
+        returnDateGroup.style.display = 'none';
+    </script>
+</body>
+</html>
