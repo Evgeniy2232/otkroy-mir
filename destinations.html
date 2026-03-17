@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="destinations.css">
+
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-compass"></i>
+                Открой мир
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#">Услуги <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trains.html"><i class="fas fa-train"></i> Ж/Д билеты</a>
+                        <a href="flights.html"><i class="fas fa-plane"></i> Авиабилеты</a>
+                        <a href="hotels.html"><i class="fas fa-hotel"></i> Отели</a>
+                        <a href="tours.html"><i class="fas fa-map-marked-alt"></i> Туры</a>
+                        <a href="buses.html"><i class="fas fa-bus"></i> Автобусы</a>
+                    </div>
+                </li>
+                <li><a href="destinations.html">Направления</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                 <li><a href="login.html">Войти</a></li>
+                 <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
+
+
+                <li><a href="profile.html">Личный кабинет</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="page-container">
+
+        <section class="service-hero">
+            <div class="service-hero-content">
+                <h1>Популярные направления</h1>
+                <p>Откройте для себя удивительные места по всему миру. Мы подберем идеальное направление для вашего следующего путешествия.</p>
+            </div>
+        </section>
+
+
+        <section class="destinations-page">
+            <h2 class="section-title">Исследуйте мир с нами</h2>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все направления</button>
+                <button class="filter-btn" data-filter="europe">Европа</button>
+                <button class="filter-btn" data-filter="asia">Азия</button>
+                <button class="filter-btn" data-filter="america">Америка</button>
+                <button class="filter-btn" data-filter="africa">Африка</button>
+                <button class="filter-btn" data-filter="beach">Пляжный отдых</button>
+                <button class="filter-btn" data-filter="mountain">Горный туризм</button>
+                <button class="filter-btn" data-filter="city">Городские туры</button>
+            </div>
+
+
+            <div class="destinations-grid">
+                <div class="destination-card visible" data-category="europe city">
+                    <div class="destination-image">
+                        <img src="https://i.pinimg.com/originals/9a/4f/5f/9a4f5ffabe661f5b2de146641e906a82.jpg" alt="Бали">
+                        <div class="destination-badge">Популярное</div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Бали, Индонезия</h3>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Индонезия, Азия</span>
+                        </div>
+                        <p class="destination-description">Тропический рай с богатой культурой, потрясающими пляжами и древними храмами. Идеальное место для релаксации и духовного обновления.</p>
+                        <div class="destination-features">
+                            <div class="feature">
+                                <i class="fas fa-sun"></i>
+                                <span>26-30°C</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Круглый год</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>7-14 дней</span>
+                            </div>
+                        </div>
+                        <div class="destination-price">
+                            <div class="price">от 65 000 ₽ <span>на человека</span></div>
+                            <a href="tours.html" class="cta-button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card visible" data-category="europe mountain">
+                    <div class="destination-image">
+                        <img src="https://i.pinimg.com/originals/fc/7a/71/fc7a7158c6e6e07e22e98bb3dd14c930.jpg" alt="Исландия">
+                        <div class="destination-badge">Эксклюзив</div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Исландия</h3>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Северная Европа</span>
+                        </div>
+                        <p class="destination-description">Земля огня и льда с впечатляющими вулканами, гейзерами, ледниками и северным сиянием. Уникальная природа и приключения круглый год.</p>
+                        <div class="destination-features">
+                            <div class="feature">
+                                <i class="fas fa-temperature-low"></i>
+                                <span>-5 до 15°C</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Сентябрь-Апрель</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>5-10 дней</span>
+                            </div>
+                        </div>
+                        <div class="destination-price">
+                            <div class="price">от 85 000 ₽ <span>на человека</span></div>
+                            <a href="tours.html" class="cta-button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card visible" data-category="asia city">
+                    <div class="destination-image">
+                        <img src="https://i.pinimg.com/originals/15/a6/4b/15a64beeb7b69d1b319f1f2ee5f655a1.jpg" alt="Киото">
+                        <div class="destination-badge">Культура</div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Киото, Япония</h3>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Япония, Азия</span>
+                        </div>
+                        <p class="destination-description">Древняя столица Японии с тысячами храмов, традиционными садами и богатой историей. Погрузитесь в культуру страны восходящего солнца.</p>
+                        <div class="destination-features">
+                            <div class="feature">
+                                <i class="fas fa-temperature-high"></i>
+                                <span>10-28°C</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Март-Май</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>7-12 дней</span>
+                            </div>
+                        </div>
+                        <div class="destination-price">
+                            <div class="price">от 120 000 ₽ <span>на человека</span></div>
+                            <a href="tours.html" class="cta-button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card visible" data-category="america beach">
+                    <div class="destination-image">
+                        <img src="https://s7g10.scene7.com/is/image/barcelo/kukulcan-boulevard_must-do-things-in-cancun?&" alt="Мексика">
+                        <div class="destination-badge">Пляжный отдых</div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Канкун, Мексика</h3>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Мексика, Северная Америка</span>
+                        </div>
+                        <p class="destination-description">Знаменитый курорт с белоснежными пляжами, бирюзовой водой и богатой культурой майя. Идеальное сочетание пляжного отдыха и экскурсий.</p>
+                        <div class="destination-features">
+                            <div class="feature">
+                                <i class="fas fa-sun"></i>
+                                <span>25-32°C</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Ноябрь-Апрель</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>10-14 дней</span>
+                            </div>
+                        </div>
+                        <div class="destination-price">
+                            <div class="price">от 95 000 ₽ <span>на человека</span></div>
+                            <a href="tours.html" class="cta-button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card visible" data-category="africa">
+                    <div class="destination-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=d71413fedc73a105d73aef862f98cff9_l-5875773-images-thumbs&n=13" alt="Сафари">
+                        <div class="destination-badge">Приключение</div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Сафари в Кении</h3>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Кения, Африка</span>
+                        </div>
+                        <p class="destination-description">Уникальное путешествие по национальным паркам с наблюдением за дикими животными в их естественной среде обитания. Незабываемые впечатления.</p>
+                        <div class="destination-features">
+                            <div class="feature">
+                                <i class="fas fa-temperature-high"></i>
+                                <span>20-30°C</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Июнь-Октябрь</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>8-12 дней</span>
+                            </div>
+                        </div>
+                        <div class="destination-price">
+                            <div class="price">от 150 000 ₽ <span>на человека</span></div>
+                            <a href="tours.html" class="cta-button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card visible" data-category="europe city">
+                    <div class="destination-image">
+                        <img src="https://resize.elle.fr/original/var/plain_site/storage/images/loisirs/sorties/news/que-faire-a-paris-le-week-end-du-26-27-28-et-30-mai-4130421/98947134-1-fre-FR/Que-faire-a-Paris-le-week-end-du-26-27-28-et-30-mai.jpg" alt="Париж">
+                        <div class="destination-badge">Романтика</div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Париж, Франция</h3>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Франция, Европа</span>
+                        </div>
+                        <p class="destination-description">Город любви с богатой историей, архитектурными шедеврами и мировой кухней. Посетите Эйфелеву башню, Лувр и Монмартр.</p>
+                        <div class="destination-features">
+                            <div class="feature">
+                                <i class="fas fa-temperature-high"></i>
+                                <span>5-25°C</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Апрель-Октябрь</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>5-7 дней</span>
+                            </div>
+                        </div>
+                        <div class="destination-price">
+                            <div class="price">от 75 000 ₽ <span>на человека</span></div>
+                            <a href="tours.html" class="cta-button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="regions">
+                <h2 class="section-title">Популярные регионы</h2>
+                <div class="regions-grid">
+                    <div class="region-card">
+                        <div class="region-image">
+                            <img src="https://i.pinimg.com/originals/f7/2a/51/f72a511f053164de427604412e30b607.jpg" alt="Европа">
+                        </div>
+                        <div class="region-content">
+                            <h3>Европа</h3>
+                            <div class="region-count">24 направления</div>
+                        </div>
+                    </div>
+                    <div class="region-card">
+                        <div class="region-image">
+                            <img src="https://globaltribune.net/assets/manager/image/1636560233-2-moadi-club-p-vostochnaya-aziya-yaponiya-3.jpg" alt="Азия">
+                        </div>
+                        <div class="region-content">
+                            <h3>Азия</h3>
+                            <div class="region-count">18 направлений</div>
+                        </div>
+                    </div>
+                    <div class="region-card">
+                        <div class="region-image">
+                            <img src="https://avatars.mds.yandex.net/i?id=9a68b4b21b3da68ca2a29adbebd44deff2a1c13d-6297400-images-thumbs&n=13" alt="Америка">
+                        </div>
+                        <div class="region-content">
+                            <h3>Америка</h3>
+                            <div class="region-count">15 направлений</div>
+                        </div>
+                    </div>
+                    <div class="region-card">
+                        <div class="region-image">
+                            <img src="https://i.pinimg.com/originals/7d/39/e3/7d39e34b6d3d1f54644d08753e6f7f33.jpg" alt="Африка">
+                        </div>
+                        <div class="region-content">
+                            <h3>Африка</h3>
+                            <div class="region-count">12 направлений</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <div class="newsletter-content">
+                    <h2>Не нашли подходящее направление?</h2>
+                    <p>Подпишитесь на нашу рассылку и первыми узнавайте о новых маршрутах и специальных предложениях.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Ваш email" required>
+                        <button type="submit" class="newsletter-button">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Открой мир</h3>
+                <p>Мы помогаем путешественникам открывать мир с новой стороны, создавая незабываемые впечатления и уникальные маршруты.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Услуги</h3>
+                <ul class="footer-links">
+                    <li><a href="trains.html">Ж/Д билеты</a></li>
+                    <li><a href="flights.html">Авиабилеты</a></li>
+                    <li><a href="hotels.html">Отели</a></li>
+                    <li><a href="tours.html">Туры</a></li>
+                    <li><a href="buses.html">Автобусы</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Поддержка</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Центр помощи</a></li>
+                    <li><a href="#">Свяжитесь с нами</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Путешественников, 15</li>
+                    <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                    <li><i class="fas fa-envelope"></i> info@wanderlust.ru</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Открой мир. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const destinationCards = document.querySelectorAll('.destination-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                destinationCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                        }, 100);
+                    } else if (card.getAttribute('data-category').includes(filterValue)) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                        }, 100);
+                    } else {
+                        card.classList.remove('visible');
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.newsletter-input').value;
+            alert(`Спасибо за подписку! На адрес ${email} будут приходить новости о наших направлениях.`);
+            this.reset();
+        });
+        function checkVisibility() {
+            const cards = document.querySelectorAll('.destination-card, .region-card');
+            
+            cards.forEach((card, index) => {
+                const rect = card.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight - 100;
+                
+                if (isVisible && card.style.display !== 'none') {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 200);
+                }
+            });
+        }
+
+        checkVisibility();
+        
+
+        window.addEventListener('scroll', checkVisibility);
+    </script>
+</body>
+</html>

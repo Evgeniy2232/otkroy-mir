@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="profile.css">
+
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-compass"></i>
+                Открой мир
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#">Услуги <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trains.html"><i class="fas fa-train"></i> Ж/Д билеты</a>
+                        <a href="flights.html"><i class="fas fa-plane"></i> Авиабилеты</a>
+                        <a href="hotels.html"><i class="fas fa-hotel"></i> Отели</a>
+                        <a href="tours.html"><i class="fas fa-map-marked-alt"></i> Туры</a>
+                        <a href="buses.html"><i class="fas fa-bus"></i> Автобусы</a>
+                    </div>
+                </li>
+                <li><a href="destinations.html">Направления</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="profile.html" class="active">Личный кабинет</a></li>
+                <li><a href="login.html">Войти</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-container">
+
+        <section class="profile-hero">
+            <div class="profile-hero-content">
+                <h1>Личный кабинет</h1>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <div class="profile-grid">
+
+                <div class="profile-sidebar">
+                    <div class="user-info">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Алексей" class="user-avatar">
+                        <h2 class="user-name">Алексей Петров</h2>
+                        <p class="user-email">alexey.petrov@example.com</p>
+                    </div>
+
+                    <div class="user-stats">
+                        <div class="stat">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Поездок</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Активные</div>
+                        </div>
+                    </div>
+
+                    <ul class="profile-menu">
+                        <li><a href="#bookings" class="active"><i class="fas fa-suitcase"></i> Мои поездки</a></li>
+                        <li><a href="#profile"><i class="fas fa-user"></i> Профиль</a></li>
+                        <li><a href="#settings"><i class="fas fa-cog"></i> Настройки</a></li>
+                        <li><a href="#favorites"><i class="fas fa-heart"></i> Избранное</a></li>
+                        <li><a href="#reviews"><i class="fas fa-star"></i> Мои отзывы</a></li>
+                        <li><a href="#payment"><i class="fas fa-credit-card"></i> Способы оплаты</a></li>
+                        <li><a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Выйти</a></li>
+                    </ul>
+                </div>
+
+                <div class="profile-main">
+                    <div id="bookings">
+                        <h2 class="section-title">Мои бронирования</h2>
+                        
+                        <div class="bookings-list">
+                            <div class="booking-card">
+                                <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1038&q=80" alt="Бали" class="booking-image">
+                                <div class="booking-details">
+                                    <h3>Отдых на Бали, Индонезия</h3>
+                                    <div class="booking-info">
+                                        <div><i class="fas fa-calendar-alt"></i> 15-25 июля 2023</div>
+                                        <div><i class="fas fa-users"></i> 2 взрослых</div>
+                                    </div>
+                                    <span class="booking-status status-confirmed">Подтверждено</span>
+                                </div>
+                                <div class="booking-actions">
+                                    <button class="action-button view-button">Подробнее</button>
+                                    <button class="action-button cancel-button">Отменить</button>
+                                </div>
+                            </div>
+
+                            <div class="booking-card">
+                                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Отель" class="booking-image">
+                                <div class="booking-details">
+                                    <h3>Отель в Париже, Франция</h3>
+                                    <div class="booking-info">
+                                        <div><i class="fas fa-calendar-alt"></i> 10-15 сентября 2023</div>
+                                        <div><i class="fas fa-users"></i> 1 взрослый</div>
+                                    </div>
+                                    <span class="booking-status status-pending">Ожидание</span>
+                                </div>
+                                <div class="booking-actions">
+                                    <button class="action-button view-button">Подробнее</button>
+                                    <button class="action-button cancel-button">Отменить</button>
+                                </div>
+                            </div>
+
+                            <div class="booking-card">
+                                <img src="https://images.unsplash.com/photo-1599669454699-248893623440?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Поезд" class="booking-image">
+                                <div class="booking-details">
+                                    <h3>Ж/Д билеты Москва-Санкт-Петербург</h3>
+                                    <div class="booking-info">
+                                        <div><i class="fas fa-calendar-alt"></i> 5 августа 2023</div>
+                                        <div><i class="fas fa-users"></i> 1 взрослый</div>
+                                    </div>
+                                    <span class="booking-status status-confirmed">Подтверждено</span>
+                                </div>
+                                <div class="booking-actions">
+                                    <button class="action-button view-button">Подробнее</button>
+                                    <button class="action-button cancel-button">Отменить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile" style="display: none;">
+                        <h2 class="section-title">Личная информация</h2>
+                        
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="first-name">Имя</label>
+                                <input type="text" id="first-name" value="Алексей">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Фамилия</label>
+                                <input type="text" id="last-name" value="Петров">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" value="alexey.petrov@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" value="+7 (912) 345-67-89">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthdate">Дата рождения</label>
+                                <input type="date" id="birthdate" value="1990-05-15">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Страна</label>
+                                <select id="country">
+                                    <option value="ru" selected>Россия</option>
+                                    <option value="kz">Казахстан</option>
+                                    <option value="by">Беларусь</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="address">Адрес</label>
+                                <input type="text" id="address" value="Москва, ул. Примерная, д. 10, кв. 25">
+                            </div>
+                            <div class="form-group full-width">
+                                <button type="submit" class="save-button">Сохранить изменения</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Открой мир</h3>
+                <p>Мы помогаем путешественникам открывать мир с новой стороны, создавая незабываемые впечатления и уникальные маршруты.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Услуги</h3>
+                <ul class="footer-links">
+                    <li><a href="trains.html">Ж/Д билеты</a></li>
+                    <li><a href="flights.html">Авиабилеты</a></li>
+                    <li><a href="hotels.html">Отели</a></li>
+                    <li><a href="tours.html">Туры</a></li>
+                    <li><a href="buses.html">Автобусы</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Поддержка</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Центр помощи</a></li>
+                    <li><a href="#">Свяжитесь с нами</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Путешественников, 15</li>
+                    <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                    <li><i class="fas fa-envelope"></i> info@wanderlust.ru</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Открой мир. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+        const menuItems = document.querySelectorAll('.profile-menu a');
+        const sections = document.querySelectorAll('.profile-main > div');
+        
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (this.classList.contains('logout')) {
+                    e.preventDefault();
+                    if (confirm('Вы уверены, что хотите выйти?')) {
+                        window.location.href = 'index.html';
+                    }
+                    return;
+                }
+                
+                e.preventDefault();
+                
+                menuItems.forEach(i => i.classList.remove('active'));
+                
+
+                this.classList.add('active');
+
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.view-button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Детали бронирования будут показаны здесь');
+            });
+        });
+        
+        document.querySelectorAll('.cancel-button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (confirm('Вы уверены, что хотите отменить это бронирование?')) {
+                    alert('Бронирование отменено');
+                }
+            });
+        });
+        document.querySelector('.profile-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Изменения сохранены успешно!');
+        });
+    </script>
+</body>
+</html>

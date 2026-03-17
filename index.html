@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открой мир</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="yandex-verification" content="4f21a537f930b356" />
+    
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-compass"></i>
+                Открой мир
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#">Услуги <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trains.html"><i class="fas fa-train"></i> Ж/Д билеты</a>
+                        <a href="flights.html"><i class="fas fa-plane"></i> Авиабилеты</a>
+                        <a href="hotels.html"><i class="fas fa-hotel"></i> Отели</a>
+                        <a href="tours.html"><i class="fas fa-map-marked-alt"></i> Туры</a>
+                        <a href="buses.html"><i class="fas fa-bus"></i> Автобусы</a>
+                    </div>
+                </li>
+                <li><a href="destinations.html">Направления</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="login.html">Войти</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <!-- Слайдер -->
+        <section class="slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="https://i.pinimg.com/1200x/8a/2b/d1/8a2bd1bc0a38f39e1289760da2ba0c3d.jpg" alt="Путешествие по горам" class="slide-image">
+                    <div class="slide-content">
+                        <h1>Открой мир заново</h1>
+                        <p>Откройте для себя уникальные направления, погрузитесь в местную культуру и создавайте воспоминания, которые останутся с вами на всю жизнь.</p>
+                        <a href="#services" class="cta-button">Начать путешествие</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://avatars.mds.yandex.net/i?id=07c6a19a7b480c568d8cd182309c8db8_l-9245043-images-thumbs&n=13" alt="Природа и горы" class="slide-image">
+                    <div class="slide-content">
+                        <h1>Новые горизонты</h1>
+                        <p>Исследуйте неизведанные места и откройте для себя удивительные уголки нашей планеты.</p>
+                        <a href="#services" class="cta-button">Исследовать</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://cdn.images.express.co.uk/img/dynamic/25/1200x630/5568655.jpg" alt="Пляж и океан" class="slide-image">
+                    <div class="slide-content">
+                        <h1>Путешествуйте с комфортом</h1>
+                        <p>Мы позаботимся о всех деталях вашего путешествия, чтобы вы могли наслаждаться каждым моментом.</p>
+                        <a href="#services" class="cta-button">Подробнее</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.pinimg.com/736x/02/1e/33/021e33fab73c2cb0a5cd5e0515793493.jpg" alt="Городской пейзаж" class="slide-image">
+                    <div class="slide-content">
+                        <h1>Города мечты</h1>
+                        <p>Откройте для себя самые красивые города мира и погрузитесь в их уникальную атмосферу.</p>
+                        <a href="#services" class="cta-button">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.pinimg.com/originals/dc/d3/4c/dcd34c302734aabe3c4fcc7e6b33fa7d.jpg" alt="Лес и природа" class="slide-image">
+                    <div class="slide-content">
+                        <h1>Природные чудеса</h1>
+                        <p>Восхититесь красотой природных ландшафтов и откройте для себя скрытые жемчужины нашей планеты.</p>
+                        <a href="#services" class="cta-button">Открыть</a>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots"></div>
+        </section>
+
+        <section class="services" id="services">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid">
+                <a href="trains.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Ж/Д билеты</h3>
+                        <p>Путешествуйте с комфортом по железной дороге. Быстрое бронирование и лучшие цены.</p>
+                    </div>
+                </a>
+                <a href="flights.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Авиабилеты</h3>
+                        <p>Найдите идеальные рейсы по всему миру. Сравнивайте цены и бронируйте выгодно.</p>
+                    </div>
+                </a>
+                <a href="hotels.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Отели</h3>
+                        <p>Подберите идеальное жилье для вашего путешествия. От бюджетных до роскошных отелей.</p>
+                    </div>
+                </a>
+                <a href="tours.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Туры</h3>
+                        <p>Готовые туры и индивидуальные маршруты. Откройте для себя новые горизонты.</p>
+                    </div>
+                </a>
+                <a href="buses.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Автобусы</h3>
+                        <p>Комфортабельные автобусные перевозки по городам и странам. Экономьте на путешествиях.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Открой мир</h3>
+                <p>Мы помогаем путешественникам открывать мир с новой стороны, создавая незабываемые впечатления и уникальные маршруты.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Услуги</h3>
+                <ul class="footer-links">
+                    <li><a href="trains.html">Ж/Д билеты</a></li>
+                    <li><a href="flights.html">Авиабилеты</a></li>
+                    <li><a href="hotels.html">Отели</a></li>
+                    <li><a href="tours.html">Туры</a></li>
+                    <li><a href="buses.html">Автобусы</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Поддержка</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Центр помощи</a></li>
+                    <li><a href="#">Свяжитесь с нами</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Контакты</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Путешественников, 15</li>
+                    <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                    <li><i class="fas fa-envelope"></i> info@wanderlust.ru</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Открой мир. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Слайдер
+        class Slider {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.dotsContainer = document.querySelector('.slider-dots');
+                this.prevBtn = document.querySelector('.prev-btn');
+                this.nextBtn = document.querySelector('.next-btn');
+                this.currentSlide = 0;
+                this.autoSlideInterval = null;
+                this.autoSlideDelay = 5000;
+
+                this.init();
+            }
+
+            init() {
+                this.createDots();
+                this.addEventListeners();
+                this.startAutoSlide();
+                this.showSlide(this.currentSlide);
+            }
+
+            createDots() {
+                this.slides.forEach((_, index) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => this.showSlide(index));
+                    this.dotsContainer.appendChild(dot);
+                });
+            }
+
+            addEventListeners() {
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+                // Пауза авто-переключения при наведении
+                const slider = document.querySelector('.slider');
+                slider.addEventListener('mouseenter', () => this.stopAutoSlide());
+                slider.addEventListener('mouseleave', () => this.startAutoSlide());
+            }
+
+            showSlide(index) {
+                this.slides.forEach(slide => slide.classList.remove('active'));
+                document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+
+                this.currentSlide = index;
+                this.slides[this.currentSlide].classList.add('active');
+                document.querySelectorAll('.dot')[this.currentSlide].classList.add('active');
+            }
+
+            nextSlide() {
+                let next = this.currentSlide + 1;
+                if (next >= this.slides.length) next = 0;
+                this.showSlide(next);
+            }
+
+            prevSlide() {
+                let prev = this.currentSlide - 1;
+                if (prev < 0) prev = this.slides.length - 1;
+                this.showSlide(prev);
+            }
+
+            startAutoSlide() {
+                this.autoSlideInterval = setInterval(() => {
+                    this.nextSlide();
+                }, this.autoSlideDelay);
+            }
+
+            stopAutoSlide() {
+                if (this.autoSlideInterval) {
+                    clearInterval(this.autoSlideInterval);
+                }
+            }
+        }
+
+        // Инициализация слайдера
+        document.addEventListener('DOMContentLoaded', () => {
+            new Slider();
+        });
+
+        // Существующий код
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+
+        function checkVisibility() {
+            const cards = document.querySelectorAll('.service-card');
+            
+            cards.forEach((card, index) => {
+                const rect = card.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight - 100;
+                
+                if (isVisible) {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 200);
+                }
+            });
+        }
+
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility);
+    </script>
+</body>
+</html>
