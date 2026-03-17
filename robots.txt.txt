@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin.html
+Disallow: /login.html
+Disallow: /signup.html
+Disallow: /profile.html
+
+Sitemap: https://otkroy-mir.ru/sitemap.xml
