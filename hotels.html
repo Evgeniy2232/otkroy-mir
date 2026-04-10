@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Забронируйте отель в любом уголке мира. Широкий выбор жилья: от бюджетных до роскошных отелей. Честные отзывы и гарантия лучшей цены.">
     <title>Отели - Открой мир</title>
     <link rel="stylesheet" href="hotels.css">
+    <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
 <!-- Yandex.Metrika counter -->
@@ -57,6 +59,7 @@
                 <li><a href="index.html#contact">Контакты</a></li>
                 <li><a href="login.html">Войти</a></li>
                 <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
                 <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
             </ul>
             <div class="menu-toggle">
@@ -154,10 +157,11 @@
                 </form>
             </div>
 
-            <!-- Новый раздел с городами -->
+            <!-- Раздел с городами (все карточки дополнены кнопкой "В корзину") -->
             <div class="cities-section">
                 <h2 class="section-title">Популярные направления для отдыха</h2>
                 <div class="cities-grid">
+                    <!-- Санкт-Петербург -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://i.pinimg.com/736x/68/af/2e/68af2e15f7cdd5b33dba273ff41cd6c1.jpg" alt="Санкт-Петербург">
@@ -172,8 +176,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-spb" 
+                                data-name="Отель в Санкт-Петербурге" 
+                                data-price="2500" 
+                                data-type="Отель" 
+                                data-image="https://i.pinimg.com/736x/68/af/2e/68af2e15f7cdd5b33dba273ff41cd6c1.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Казань -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://i.pinimg.com/736x/65/92/1c/65921c70ca3f4ae7d803e10c375254cc.jpg" alt="Казань">
@@ -188,8 +201,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-kazan" 
+                                data-name="Отель в Казани" 
+                                data-price="2200" 
+                                data-type="Отель" 
+                                data-image="https://i.pinimg.com/736x/65/92/1c/65921c70ca3f4ae7d803e10c375254cc.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Сочи -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://avatars.mds.yandex.net/get-altay/16325379/2a000001993ce6b593afbabf6a5d72f207d8/orig" alt="Сочи">
@@ -204,8 +226,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-sochi" 
+                                data-name="Отель в Сочи" 
+                                data-price="3800" 
+                                data-type="Отель" 
+                                data-image="https://avatars.mds.yandex.net/get-altay/16325379/2a000001993ce6b593afbabf6a5d72f207d8/orig">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Екатеринбург -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://www.aeroflot.ru/media/aflfiles/travelguide/ru/svx/svx-4.jpg" alt="Екатеринбург">
@@ -220,8 +251,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-ekb" 
+                                data-name="Отель в Екатеринбурге" 
+                                data-price="2100" 
+                                data-type="Отель" 
+                                data-image="https://www.aeroflot.ru/media/aflfiles/travelguide/ru/svx/svx-4.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Нижний Новгород -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://palomnik.nne.ru/wp-content/uploads/2023/02/Chkalovskaya_otkrytie_bezlogo.jpg" alt="Нижний Новгород">
@@ -236,8 +276,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-nn" 
+                                data-name="Отель в Нижнем Новгороде" 
+                                data-price="1900" 
+                                data-type="Отель" 
+                                data-image="https://palomnik.nne.ru/wp-content/uploads/2023/02/Chkalovskaya_otkrytie_bezlogo.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Новосибирск -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://pic.rutubelist.ru/video/2025-05-09/22/bb/22bb152d5adeb08b9f899848e4587eae.jpg" alt="Новосибирск">
@@ -252,8 +301,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-nsk" 
+                                data-name="Отель в Новосибирске" 
+                                data-price="2300" 
+                                data-type="Отель" 
+                                data-image="https://pic.rutubelist.ru/video/2025-05-09/22/bb/22bb152d5adeb08b9f899848e4587eae.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Самара -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://sarinform.ru/assets/images/resources/205574/9samara.jpg" alt="Самара">
@@ -268,8 +326,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-samara" 
+                                data-name="Отель в Самаре" 
+                                data-price="1800" 
+                                data-type="Отель" 
+                                data-image="https://sarinform.ru/assets/images/resources/205574/9samara.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Ростов-на-Дону -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://don-plaza.ru/upload/iblock/61d/lvb77ryhs40dxr00pgdr9d3l559cl01s.jpg" alt="Ростов-на-Дону">
@@ -284,8 +351,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-rostov" 
+                                data-name="Отель в Ростове-на-Дону" 
+                                data-price="2000" 
+                                data-type="Отель" 
+                                data-image="https://don-plaza.ru/upload/iblock/61d/lvb77ryhs40dxr00pgdr9d3l559cl01s.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Уфа -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://cdn.culture.ru/images/e767157a-5487-52de-9eab-8ec54a97f505" alt="Уфа">
@@ -300,8 +376,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-ufa" 
+                                data-name="Отель в Уфе" 
+                                data-price="1700" 
+                                data-type="Отель" 
+                                data-image="https://cdn.culture.ru/images/e767157a-5487-52de-9eab-8ec54a97f505">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Красноярск -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://img.geliophoto.com/krsk2020/26_krsk2020.jpg" alt="Красноярск">
@@ -316,8 +401,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-krasnoyarsk" 
+                                data-name="Отель в Красноярске" 
+                                data-price="2400" 
+                                data-type="Отель" 
+                                data-image="https://img.geliophoto.com/krsk2020/26_krsk2020.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Пермь -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://i01.fotocdn.net/s217/b2a5f9913e3f1e09/public_pin_l/2965668718.jpg" alt="Пермь">
@@ -332,8 +426,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-perm" 
+                                data-name="Отель в Перми" 
+                                data-price="1900" 
+                                data-type="Отель" 
+                                data-image="https://i01.fotocdn.net/s217/b2a5f9913e3f1e09/public_pin_l/2965668718.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Воронеж -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://36pix.ru/external/img/lj/2014_03_25/0021.jpg" alt="Воронеж">
@@ -348,8 +451,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-voronezh" 
+                                data-name="Отель в Воронеже" 
+                                data-price="1600" 
+                                data-type="Отель" 
+                                data-image="https://36pix.ru/external/img/lj/2014_03_25/0021.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Волгоград -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://avatars.mds.yandex.net/i?id=bbc8b22341919d31b4ffd8d105c3b29d_l-4345430-images-thumbs&n=13" alt="Волгоград">
@@ -364,8 +476,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-volgograd" 
+                                data-name="Отель в Волгограде" 
+                                data-price="1500" 
+                                data-type="Отель" 
+                                data-image="https://avatars.mds.yandex.net/i?id=bbc8b22341919d31b4ffd8d105c3b29d_l-4345430-images-thumbs&n=13">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Краснодар -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_67880fe7039c2e7621b82359_67881273039c2e7621bbf040/scale_1200" alt="Краснодар">
@@ -380,8 +501,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-krasnodar" 
+                                data-name="Отель в Краснодаре" 
+                                data-price="2200" 
+                                data-type="Отель" 
+                                data-image="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_67880fe7039c2e7621b82359_67881273039c2e7621bbf040/scale_1200">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Саратов -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://avatars.mds.yandex.net/i?id=cd68a4e817b1c2132ada77fd277fb719_l-10498726-images-thumbs&n=13" alt="Саратов">
@@ -396,8 +526,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-saratov" 
+                                data-name="Отель в Саратове" 
+                                data-price="1600" 
+                                data-type="Отель" 
+                                data-image="https://avatars.mds.yandex.net/i?id=cd68a4e817b1c2132ada77fd277fb719_l-10498726-images-thumbs&n=13">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Тюмень -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://resize.tripster.ru/-DVnVVXcT_nJxrB48jJ1yjL6tCw=/fit-in/1220x600/filters:no_upscale()/https://cdn.tripster.ru/photos/c9b1b88f-5008-4881-911c-78776c485699.jpg" alt="Тюмень">
@@ -412,8 +551,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-tyumen" 
+                                data-name="Отель в Тюмени" 
+                                data-price="2100" 
+                                data-type="Отель" 
+                                data-image="https://resize.tripster.ru/-DVnVVXcT_nJxrB48jJ1yjL6tCw=/fit-in/1220x600/filters:no_upscale()/https://cdn.tripster.ru/photos/c9b1b88f-5008-4881-911c-78776c485699.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Ижевск -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://s1.stc.all.kpcdn.net/russia/wp-content/uploads/2024/10/Mihailo-Arhangelskij-sobor-2-Izhevsk.jpg" alt="Ижевск">
@@ -428,8 +576,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-izhevsk" 
+                                data-name="Отель в Ижевске" 
+                                data-price="1500" 
+                                data-type="Отель" 
+                                data-image="https://s1.stc.all.kpcdn.net/russia/wp-content/uploads/2024/10/Mihailo-Arhangelskij-sobor-2-Izhevsk.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Барнаул -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://sdelanounas.ru/i/a/w/1/f_aW1nLmdlbGlvcGhvdG8uY29tL2JybjIwMjEvYnJuMjAyMV83Ny5qcGc_X19pZD0xNDQ0MTg=.jpeg" alt="Барнаул">
@@ -444,8 +601,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-barnaul" 
+                                data-name="Отель в Барнауле" 
+                                data-price="1800" 
+                                data-type="Отель" 
+                                data-image="https://sdelanounas.ru/i/a/w/1/f_aW1nLmdlbGlvcGhvdG8uY29tL2JybjIwMjEvYnJuMjAyMV83Ny5qcGc_X19pZD0xNDQ0MTg=.jpeg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Иркутск -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://imcdn.bolshayastrana.com/1200x00/BS_f87c6c4e86e9baa5d89fed12bd02c61c0efb3e6a98c745599c5b06a123ceb2d9.jpeg" alt="Иркутск">
@@ -460,8 +626,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-irkutsk" 
+                                data-name="Отель в Иркутске" 
+                                data-price="2300" 
+                                data-type="Отель" 
+                                data-image="https://imcdn.bolshayastrana.com/1200x00/BS_f87c6c4e86e9baa5d89fed12bd02c61c0efb3e6a98c745599c5b06a123ceb2d9.jpeg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Ульяновск -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://ic.pics.livejournal.com/matveychev_oleg/27303223/30994101/30994101_1000.jpg" alt="Ульяновск">
@@ -476,8 +651,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-ulyanovsk" 
+                                data-name="Отель в Ульяновске" 
+                                data-price="1600" 
+                                data-type="Отель" 
+                                data-image="https://ic.pics.livejournal.com/matveychev_oleg/27303223/30994101/30994101_1000.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Хабаровск -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://avatars.mds.yandex.net/i?id=fd6893c7561bea56df8f60773e0bb8ff_l-3524127-images-thumbs&n=13" alt="Хабаровск">
@@ -492,8 +676,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-khabarovsk" 
+                                data-name="Отель в Хабаровске" 
+                                data-price="2500" 
+                                data-type="Отель" 
+                                data-image="https://avatars.mds.yandex.net/i?id=fd6893c7561bea56df8f60773e0bb8ff_l-3524127-images-thumbs&n=13">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Ярославль -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://cdn.culture.ru/images/ec5ef501-3cb7-5683-991d-5b097155bca6" alt="Ярославль">
@@ -508,8 +701,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-yaroslavl" 
+                                data-name="Отель в Ярославле" 
+                                data-price="1900" 
+                                data-type="Отель" 
+                                data-image="https://cdn.culture.ru/images/ec5ef501-3cb7-5683-991d-5b097155bca6">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Владивосток -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://cdni.russiatoday.com/rbthmedia/images/2022.07/original/62e4df5a42495f019e6359d7.jpg" alt="Владивосток">
@@ -524,8 +726,17 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star-half-alt"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-vladivostok" 
+                                data-name="Отель во Владивостоке" 
+                                data-price="2800" 
+                                data-type="Отель" 
+                                data-image="https://cdni.russiatoday.com/rbthmedia/images/2022.07/original/62e4df5a42495f019e6359d7.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Омск -->
                     <div class="city-card">
                         <div class="city-image">
                             <img src="https://sdelanounas.ru/i/a/w/1/f_aW1nLmdlbGlvcGhvdG8uY29tL29tc2syMDIwLzA0X29tc2syMDIwLmpwZz9fX2lkPTEzNzUxOQ==.jpeg" alt="Омск">
@@ -540,6 +751,14 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
+                            <button class="add-to-cart-btn" 
+                                data-id="hotel-omsk" 
+                                data-name="Отель в Омске" 
+                                data-price="1700" 
+                                data-type="Отель" 
+                                data-image="https://sdelanounas.ru/i/a/w/1/f_aW1nLmdlbGlvcGhvdG8uY29tL29tc2syMDIwLzA0X29tc2syMDIwLmpwZz9fX2lkPTEzNzUxOQ==.jpeg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -592,6 +811,7 @@
         </div>
     </footer>
 
+    <script src="cart.js"></script>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
