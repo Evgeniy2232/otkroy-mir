@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Комфортабельные автобусные перевозки по городам и странам. Экономные билеты, гибкое расписание, удобные кресла и Wi-Fi на борту.">
     <title>Автобусы - Открой мир</title>
     <link rel="stylesheet" href="buses.css">
+    <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
 <!-- Yandex.Metrika counter -->
@@ -57,6 +59,7 @@
                 <li><a href="index.html#contact">Контакты</a></li>
                 <li><a href="login.html">Войти</a></li>
                 <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
                 <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
             </ul>
             <div class="menu-toggle">
@@ -162,6 +165,7 @@
             <div class="routes-section">
                 <h2 class="section-title">Популярные маршруты из Москвы</h2>
                 <div class="routes-grid">
+                    <!-- Санкт-Петербург -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://i.pinimg.com/736x/68/af/2e/68af2e15f7cdd5b33dba273ff41cd6c1.jpg" alt="Санкт-Петербург">
@@ -170,8 +174,18 @@
                             <h3>Санкт-Петербург</h3>
                             <p class="route">Москва → Санкт-Петербург</p>
                             <p class="price">от 1 200 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-spb" 
+                                data-name="Автобус Москва-Санкт-Петербург" 
+                                data-price="1200" 
+                                data-type="Автобус" 
+                                data-image="https://i.pinimg.com/736x/68/af/2e/68af2e15f7cdd5b33dba273ff41cd6c1.jpg"
+                                data-route="Москва → Санкт-Петербург">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Казань -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://i.pinimg.com/736x/65/92/1c/65921c70ca3f4ae7d803e10c375254cc.jpg" alt="Казань">
@@ -180,8 +194,18 @@
                             <h3>Казань</h3>
                             <p class="route">Москва → Казань</p>
                             <p class="price">от 1 500 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-kazan" 
+                                data-name="Автобус Москва-Казань" 
+                                data-price="1500" 
+                                data-type="Автобус" 
+                                data-image="https://i.pinimg.com/736x/65/92/1c/65921c70ca3f4ae7d803e10c375254cc.jpg"
+                                data-route="Москва → Казань">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Сочи -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://avatars.mds.yandex.net/get-altay/16325379/2a000001993ce6b593afbabf6a5d72f207d8/orig" alt="Сочи">
@@ -190,8 +214,18 @@
                             <h3>Сочи</h3>
                             <p class="route">Москва → Сочи</p>
                             <p class="price">от 2 800 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-sochi" 
+                                data-name="Автобус Москва-Сочи" 
+                                data-price="2800" 
+                                data-type="Автобус" 
+                                data-image="https://avatars.mds.yandex.net/get-altay/16325379/2a000001993ce6b593afbabf6a5d72f207d8/orig"
+                                data-route="Москва → Сочи">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Екатеринбург -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://www.aeroflot.ru/media/aflfiles/travelguide/ru/svx/svx-4.jpg" alt="Екатеринбург">
@@ -200,8 +234,18 @@
                             <h3>Екатеринбург</h3>
                             <p class="route">Москва → Екатеринбург</p>
                             <p class="price">от 2 300 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-ekb" 
+                                data-name="Автобус Москва-Екатеринбург" 
+                                data-price="2300" 
+                                data-type="Автобус" 
+                                data-image="https://www.aeroflot.ru/media/aflfiles/travelguide/ru/svx/svx-4.jpg"
+                                data-route="Москва → Екатеринбург">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Нижний Новгород -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://palomnik.nne.ru/wp-content/uploads/2023/02/Chkalovskaya_otkrytie_bezlogo.jpg" alt="Нижний Новгород">
@@ -210,8 +254,18 @@
                             <h3>Нижний Новгород</h3>
                             <p class="route">Москва → Нижний Новгород</p>
                             <p class="price">от 900 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-nn" 
+                                data-name="Автобус Москва-Нижний Новгород" 
+                                data-price="900" 
+                                data-type="Автобус" 
+                                data-image="https://palomnik.nne.ru/wp-content/uploads/2023/02/Chkalovskaya_otkrytie_bezlogo.jpg"
+                                data-route="Москва → Нижний Новгород">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Новосибирск -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://pic.rutubelist.ru/video/2025-05-09/22/bb/22bb152d5adeb08b9f899848e4587eae.jpg" alt="Новосибирск">
@@ -220,8 +274,18 @@
                             <h3>Новосибирск</h3>
                             <p class="route">Москва → Новосибирск</p>
                             <p class="price">от 3 500 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-nsk" 
+                                data-name="Автобус Москва-Новосибирск" 
+                                data-price="3500" 
+                                data-type="Автобус" 
+                                data-image="https://pic.rutubelist.ru/video/2025-05-09/22/bb/22bb152d5adeb08b9f899848e4587eae.jpg"
+                                data-route="Москва → Новосибирск">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Самара -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://sarinform.ru/assets/images/resources/205574/9samara.jpg" alt="Самара">
@@ -230,8 +294,18 @@
                             <h3>Самара</h3>
                             <p class="route">Москва → Самара</p>
                             <p class="price">от 1 400 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-samara" 
+                                data-name="Автобус Москва-Самара" 
+                                data-price="1400" 
+                                data-type="Автобус" 
+                                data-image="https://sarinform.ru/assets/images/resources/205574/9samara.jpg"
+                                data-route="Москва → Самара">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Ростов-на-Дону -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://don-plaza.ru/upload/iblock/61d/lvb77ryhs40dxr00pgdr9d3l559cl01s.jpg" alt="Ростов-на-Дону">
@@ -240,8 +314,18 @@
                             <h3>Ростов-на-Дону</h3>
                             <p class="route">Москва → Ростов-на-Дону</p>
                             <p class="price">от 1 800 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-rostov" 
+                                data-name="Автобус Москва-Ростов-на-Дону" 
+                                data-price="1800" 
+                                data-type="Автобус" 
+                                data-image="https://don-plaza.ru/upload/iblock/61d/lvb77ryhs40dxr00pgdr9d3l559cl01s.jpg"
+                                data-route="Москва → Ростов-на-Дону">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Уфа -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://cdn.culture.ru/images/e767157a-5487-52de-9eab-8ec54a97f505" alt="Уфа">
@@ -250,8 +334,18 @@
                             <h3>Уфа</h3>
                             <p class="route">Москва → Уфа</p>
                             <p class="price">от 1 700 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-ufa" 
+                                data-name="Автобус Москва-Уфа" 
+                                data-price="1700" 
+                                data-type="Автобус" 
+                                data-image="https://cdn.culture.ru/images/e767157a-5487-52de-9eab-8ec54a97f505"
+                                data-route="Москва → Уфа">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Красноярск -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://img.geliophoto.com/krsk2020/26_krsk2020.jpg" alt="Красноярск">
@@ -260,8 +354,18 @@
                             <h3>Красноярск</h3>
                             <p class="route">Москва → Красноярск</p>
                             <p class="price">от 4 200 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-krasnoyarsk" 
+                                data-name="Автобус Москва-Красноярск" 
+                                data-price="4200" 
+                                data-type="Автобус" 
+                                data-image="https://img.geliophoto.com/krsk2020/26_krsk2020.jpg"
+                                data-route="Москва → Красноярск">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Пермь -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://i01.fotocdn.net/s217/b2a5f9913e3f1e09/public_pin_l/2965668718.jpg" alt="Пермь">
@@ -270,8 +374,18 @@
                             <h3>Пермь</h3>
                             <p class="route">Москва → Пермь</p>
                             <p class="price">от 1 900 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-perm" 
+                                data-name="Автобус Москва-Пермь" 
+                                data-price="1900" 
+                                data-type="Автобус" 
+                                data-image="https://i01.fotocdn.net/s217/b2a5f9913e3f1e09/public_pin_l/2965668718.jpg"
+                                data-route="Москва → Пермь">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Воронеж -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://36pix.ru/external/img/lj/2014_03_25/0021.jpg" alt="Воронеж">
@@ -280,8 +394,18 @@
                             <h3>Воронеж</h3>
                             <p class="route">Москва → Воронеж</p>
                             <p class="price">от 1 100 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-voronezh" 
+                                data-name="Автобус Москва-Воронеж" 
+                                data-price="1100" 
+                                data-type="Автобус" 
+                                data-image="https://36pix.ru/external/img/lj/2014_03_25/0021.jpg"
+                                data-route="Москва → Воронеж">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Волгоград -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://avatars.mds.yandex.net/i?id=bbc8b22341919d31b4ffd8d105c3b29d_l-4345430-images-thumbs&n=13" alt="Волгоград">
@@ -290,8 +414,18 @@
                             <h3>Волгоград</h3>
                             <p class="route">Москва → Волгоград</p>
                             <p class="price">от 1 600 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-volgograd" 
+                                data-name="Автобус Москва-Волгоград" 
+                                data-price="1600" 
+                                data-type="Автобус" 
+                                data-image="https://avatars.mds.yandex.net/i?id=bbc8b22341919d31b4ffd8d105c3b29d_l-4345430-images-thumbs&n=13"
+                                data-route="Москва → Волгоград">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Краснодар -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_67880fe7039c2e7621b82359_67881273039c2e7621bbf040/scale_1200" alt="Краснодар">
@@ -300,8 +434,18 @@
                             <h3>Краснодар</h3>
                             <p class="route">Москва → Краснодар</p>
                             <p class="price">от 2 200 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-krasnodar" 
+                                data-name="Автобус Москва-Краснодар" 
+                                data-price="2200" 
+                                data-type="Автобус" 
+                                data-image="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_67880fe7039c2e7621b82359_67881273039c2e7621bbf040/scale_1200"
+                                data-route="Москва → Краснодар">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Саратов -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://avatars.mds.yandex.net/i?id=cd68a4e817b1c2132ada77fd277fb719_l-10498726-images-thumbs&n=13" alt="Саратов">
@@ -310,8 +454,18 @@
                             <h3>Саратов</h3>
                             <p class="route">Москва → Саратов</p>
                             <p class="price">от 1 500 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-saratov" 
+                                data-name="Автобус Москва-Саратов" 
+                                data-price="1500" 
+                                data-type="Автобус" 
+                                data-image="https://avatars.mds.yandex.net/i?id=cd68a4e817b1c2132ada77fd277fb719_l-10498726-images-thumbs&n=13"
+                                data-route="Москва → Саратов">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Тюмень -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://resize.tripster.ru/-DVnVVXcT_nJxrB48jJ1yjL6tCw=/fit-in/1220x600/filters:no_upscale()/https://cdn.tripster.ru/photos/c9b1b88f-5008-4881-911c-78776c485699.jpg" alt="Тюмень">
@@ -320,8 +474,18 @@
                             <h3>Тюмень</h3>
                             <p class="route">Москва → Тюмень</p>
                             <p class="price">от 2 400 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-tyumen" 
+                                data-name="Автобус Москва-Тюмень" 
+                                data-price="2400" 
+                                data-type="Автобус" 
+                                data-image="https://resize.tripster.ru/-DVnVVXcT_nJxrB48jJ1yjL6tCw=/fit-in/1220x600/filters:no_upscale()/https://cdn.tripster.ru/photos/c9b1b88f-5008-4881-911c-78776c485699.jpg"
+                                data-route="Москва → Тюмень">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Ижевск -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://s1.stc.all.kpcdn.net/russia/wp-content/uploads/2024/10/Mihailo-Arhangelskij-sobor-2-Izhevsk.jpg" alt="Ижевск">
@@ -330,8 +494,18 @@
                             <h3>Ижевск</h3>
                             <p class="route">Москва → Ижевск</p>
                             <p class="price">от 1 300 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-izhevsk" 
+                                data-name="Автобус Москва-Ижевск" 
+                                data-price="1300" 
+                                data-type="Автобус" 
+                                data-image="https://s1.stc.all.kpcdn.net/russia/wp-content/uploads/2024/10/Mihailo-Arhangelskij-sobor-2-Izhevsk.jpg"
+                                data-route="Москва → Ижевск">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Барнаул -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://sdelanounas.ru/i/a/w/1/f_aW1nLmdlbGlvcGhvdG8uY29tL2JybjIwMjEvYnJuMjAyMV83Ny5qcGc_X19pZD0xNDQ0MTg=.jpeg" alt="Барнаул">
@@ -340,8 +514,18 @@
                             <h3>Барнаул</h3>
                             <p class="route">Москва → Барнаул</p>
                             <p class="price">от 3 800 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-barnaul" 
+                                data-name="Автобус Москва-Барнаул" 
+                                data-price="3800" 
+                                data-type="Автобус" 
+                                data-image="https://sdelanounas.ru/i/a/w/1/f_aW1nLmdlbGlvcGhvdG8uY29tL2JybjIwMjEvYnJuMjAyMV83Ny5qcGc_X19pZD0xNDQ0MTg=.jpeg"
+                                data-route="Москва → Барнаул">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Иркутск -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://imcdn.bolshayastrana.com/1200x00/BS_f87c6c4e86e9baa5d89fed12bd02c61c0efb3e6a98c745599c5b06a123ceb2d9.jpeg" alt="Иркутск">
@@ -350,8 +534,18 @@
                             <h3>Иркутск</h3>
                             <p class="route">Москва → Иркутск</p>
                             <p class="price">от 4 500 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-irkutsk" 
+                                data-name="Автобус Москва-Иркутск" 
+                                data-price="4500" 
+                                data-type="Автобус" 
+                                data-image="https://imcdn.bolshayastrana.com/1200x00/BS_f87c6c4e86e9baa5d89fed12bd02c61c0efb3e6a98c745599c5b06a123ceb2d9.jpeg"
+                                data-route="Москва → Иркутск">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Ульяновск -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://ic.pics.livejournal.com/matveychev_oleg/27303223/30994101/30994101_1000.jpg" alt="Ульяновск">
@@ -360,8 +554,18 @@
                             <h3>Ульяновск</h3>
                             <p class="route">Москва → Ульяновск</p>
                             <p class="price">от 1 400 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-ulyanovsk" 
+                                data-name="Автобус Москва-Ульяновск" 
+                                data-price="1400" 
+                                data-type="Автобус" 
+                                data-image="https://ic.pics.livejournal.com/matveychev_oleg/27303223/30994101/30994101_1000.jpg"
+                                data-route="Москва → Ульяновск">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Хабаровск -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://avatars.mds.yandex.net/i?id=fd6893c7561bea56df8f60773e0bb8ff_l-3524127-images-thumbs&n=13" alt="Хабаровск">
@@ -370,8 +574,18 @@
                             <h3>Хабаровск</h3>
                             <p class="route">Москва → Хабаровск</p>
                             <p class="price">от 6 800 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-khabarovsk" 
+                                data-name="Автобус Москва-Хабаровск" 
+                                data-price="6800" 
+                                data-type="Автобус" 
+                                data-image="https://avatars.mds.yandex.net/i?id=fd6893c7561bea56df8f60773e0bb8ff_l-3524127-images-thumbs&n=13"
+                                data-route="Москва → Хабаровск">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Ярославль -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://cdn.culture.ru/images/ec5ef501-3cb7-5683-991d-5b097155bca6" alt="Ярославль">
@@ -380,8 +594,18 @@
                             <h3>Ярославль</h3>
                             <p class="route">Москва → Ярославль</p>
                             <p class="price">от 800 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-yaroslavl" 
+                                data-name="Автобус Москва-Ярославль" 
+                                data-price="800" 
+                                data-type="Автобус" 
+                                data-image="https://cdn.culture.ru/images/ec5ef501-3cb7-5683-991d-5b097155bca6"
+                                data-route="Москва → Ярославль">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Владивосток -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://cdni.russiatoday.com/rbthmedia/images/2022.07/original/62e4df5a42495f019e6359d7.jpg" alt="Владивосток">
@@ -390,8 +614,18 @@
                             <h3>Владивосток</h3>
                             <p class="route">Москва → Владивосток</p>
                             <p class="price">от 7 200 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-vladivostok" 
+                                data-name="Автобус Москва-Владивосток" 
+                                data-price="7200" 
+                                data-type="Автобус" 
+                                data-image="https://cdni.russiatoday.com/rbthmedia/images/2022.07/original/62e4df5a42495f019e6359d7.jpg"
+                                data-route="Москва → Владивосток">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Омск -->
                     <div class="route-card">
                         <div class="route-image">
                             <img src="https://sdelanounas.ru/i/a/w/1/f_aW1nLmdlbGlvcGhvdG8uY29tL29tc2syMDIwLzA0X29tc2syMDIwLmpwZz9fX2lkPTEzNzUxOQ==.jpeg" alt="Омск">
@@ -400,6 +634,15 @@
                             <h3>Омск</h3>
                             <p class="route">Москва → Омск</p>
                             <p class="price">от 3 200 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="bus-omsk" 
+                                data-name="Автобус Москва-Омск" 
+                                data-price="3200" 
+                                data-type="Автобус" 
+                                data-image="https://sdelanounas.ru/i/a/w/1/f_aW1nLmdlbGlvcGhvdG8uY29tL29tc2syMDIwLzA0X29tc2syMDIwLmpwZz9fX2lkPTEzNzUxOQ==.jpeg"
+                                data-route="Москва → Омск">
+                                В корзину
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -452,6 +695,7 @@
         </div>
     </footer>
 
+    <script src="cart.js"></script>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
