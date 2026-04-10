@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Горящие туры и экскурсионные программы по всему миру. Индивидуальные и групповые туры с профессиональными гидами. Откройте новые горизонты!">
     <title>Туры - Открой мир</title>
     <link rel="stylesheet" href="tours.css">
+    <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
 <!-- Yandex.Metrika counter -->
@@ -57,6 +59,7 @@
                 <li><a href="index.html#contact">Контакты</a></li>
                 <li><a href="login.html">Войти</a></li>
                 <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
                 <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
             </ul>
             <div class="menu-toggle">
@@ -171,6 +174,7 @@
             <div class="tours-section">
                 <h2 class="section-title">Популярные туры по миру</h2>
                 <div class="tours-grid">
+                    <!-- Париж -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/736x/2e/30/fd/2e30fd25b46caa811e1ded84cdca3120.jpg" alt="Париж">
@@ -179,8 +183,17 @@
                             <h3>Париж, Франция</h3>
                             <p class="duration">7 дней / 6 ночей</p>
                             <p class="price">от 45 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-paris" 
+                                data-name="Тур в Париж, Франция" 
+                                data-price="45000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/736x/2e/30/fd/2e30fd25b46caa811e1ded84cdca3120.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Прага -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/be/1a/69/be1a69e0449754df2cb961bd40ca155d.jpg" alt="Прага">
@@ -189,8 +202,17 @@
                             <h3>Прага, Чехия</h3>
                             <p class="duration">5 дней / 4 ночи</p>
                             <p class="price">от 32 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-prague" 
+                                data-name="Тур в Прагу, Чехия" 
+                                data-price="32000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/be/1a/69/be1a69e0449754df2cb961bd40ca155d.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Рим -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/736x/34/a8/b9/34a8b96ee490128a9e249bf70ca17227.jpg" alt="Рим">
@@ -199,8 +221,17 @@
                             <h3>Рим, Италия</h3>
                             <p class="duration">6 дней / 5 ночей</p>
                             <p class="price">от 38 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-rome" 
+                                data-name="Тур в Рим, Италия" 
+                                data-price="38000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/736x/34/a8/b9/34a8b96ee490128a9e249bf70ca17227.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Лондон -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/736x/da/96/50/da9650b572942953ec80f7b88908a087.jpg" alt="Лондон">
@@ -209,8 +240,17 @@
                             <h3>Лондон, Великобритания</h3>
                             <p class="duration">7 дней / 6 ночей</p>
                             <p class="price">от 52 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-london" 
+                                data-name="Тур в Лондон, Великобритания" 
+                                data-price="52000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/736x/da/96/50/da9650b572942953ec80f7b88908a087.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Стамбул -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/51/22/cd/5122cd0d9565099bb4b322e70c0a9d65.jpg" alt="Стамбул">
@@ -219,8 +259,17 @@
                             <h3>Стамбул, Турция</h3>
                             <p class="duration">5 дней / 4 ночи</p>
                             <p class="price">от 28 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-istanbul" 
+                                data-name="Тур в Стамбул, Турция" 
+                                data-price="28000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/51/22/cd/5122cd0d9565099bb4b322e70c0a9d65.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Дубай -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/cc/cf/74/cccf74efb13cff0251b8b54569961fe2.jpg" alt="Дубай">
@@ -229,8 +278,17 @@
                             <h3>Дубай, ОАЭ</h3>
                             <p class="duration">8 дней / 7 ночей</p>
                             <p class="price">от 65 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-dubai" 
+                                data-name="Тур в Дубай, ОАЭ" 
+                                data-price="65000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/cc/cf/74/cccf74efb13cff0251b8b54569961fe2.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Бангкок -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/72/fb/df/72fbdfa013d8fa9f9696181daf6b294b.jpg" alt="Бангкок">
@@ -239,8 +297,17 @@
                             <h3>Бангкок, Таиланд</h3>
                             <p class="duration">10 дней / 9 ночей</p>
                             <p class="price">от 42 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-bangkok" 
+                                data-name="Тур в Бангкок, Таиланд" 
+                                data-price="42000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/72/fb/df/72fbdfa013d8fa9f9696181daf6b294b.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Токио -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/1e/0b/bf/1e0bbf90534371663cac5d42f8d7e0fc.jpg" alt="Токио">
@@ -249,8 +316,17 @@
                             <h3>Токио, Япония</h3>
                             <p class="duration">9 дней / 8 ночей</p>
                             <p class="price">от 78 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-tokyo" 
+                                data-name="Тур в Токио, Япония" 
+                                data-price="78000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/1e/0b/bf/1e0bbf90534371663cac5d42f8d7e0fc.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Нью-Йорк -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/736x/bb/69/5e/bb695e2d87ba859c5ba04b6d606971b6.jpg" alt="Нью-Йорк">
@@ -259,8 +335,17 @@
                             <h3>Нью-Йорк, США</h3>
                             <p class="duration">8 дней / 7 ночей</p>
                             <p class="price">от 89 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-ny" 
+                                data-name="Тур в Нью-Йорк, США" 
+                                data-price="89000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/736x/bb/69/5e/bb695e2d87ba859c5ba04b6d606971b6.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Амстердам -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/736x/6e/f6/89/6ef68978367c111f954a8232fb9a74d1.jpg" alt="Амстердам">
@@ -269,8 +354,17 @@
                             <h3>Амстердам, Нидерланды</h3>
                             <p class="duration">5 дней / 4 ночи</p>
                             <p class="price">от 35 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-amsterdam" 
+                                data-name="Тур в Амстердам, Нидерланды" 
+                                data-price="35000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/736x/6e/f6/89/6ef68978367c111f954a8232fb9a74d1.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Барселона -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/02/cb/09/02cb0918de9dff8dd2e894002a612cf4.jpg" alt="Барселона">
@@ -279,8 +373,17 @@
                             <h3>Барселона, Испания</h3>
                             <p class="duration">6 дней / 5 ночей</p>
                             <p class="price">от 41 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-barcelona" 
+                                data-name="Тур в Барселону, Испания" 
+                                data-price="41000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/02/cb/09/02cb0918de9dff8dd2e894002a612cf4.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Афины -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/eb/6c/78/eb6c78504994a5d178d224f01f287228.jpg" alt="Афины">
@@ -289,8 +392,17 @@
                             <h3>Афины, Греция</h3>
                             <p class="duration">6 дней / 5 ночей</p>
                             <p class="price">от 36 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-athens" 
+                                data-name="Тур в Афины, Греция" 
+                                data-price="36000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/eb/6c/78/eb6c78504994a5d178d224f01f287228.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Минск -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/80/66/a4/8066a4240277786696369bab464eca47.jpg" alt="Минск">
@@ -299,8 +411,17 @@
                             <h3>Минск, Беларусь</h3>
                             <p class="duration">4 дня / 3 ночи</p>
                             <p class="price">от 18 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-minsk" 
+                                data-name="Тур в Минск, Беларусь" 
+                                data-price="18000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/80/66/a4/8066a4240277786696369bab464eca47.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Санкт-Петербург -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/736x/68/af/2e/68af2e15f7cdd5b33dba273ff41cd6c1.jpg" alt="Санкт-Петербург">
@@ -309,8 +430,17 @@
                             <h3>Санкт-Петербург, Россия</h3>
                             <p class="duration">4 дня / 3 ночи</p>
                             <p class="price">от 15 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-spb" 
+                                data-name="Тур в Санкт-Петербург, Россия" 
+                                data-price="15000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/736x/68/af/2e/68af2e15f7cdd5b33dba273ff41cd6c1.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Казань -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/736x/65/92/1c/65921c70ca3f4ae7d803e10c375254cc.jpg" alt="Казань">
@@ -319,8 +449,17 @@
                             <h3>Казань, Россия</h3>
                             <p class="duration">3 дня / 2 ночи</p>
                             <p class="price">от 12 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-kazan" 
+                                data-name="Тур в Казань, Россия" 
+                                data-price="12000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/736x/65/92/1c/65921c70ca3f4ae7d803e10c375254cc.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Сочи -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/736x/e6/ef/ee/e6efee5a5046c41376b8899ccfbed01e.jpg" alt="Сочи">
@@ -329,8 +468,17 @@
                             <h3>Сочи, Россия</h3>
                             <p class="duration">5 дней / 4 ночи</p>
                             <p class="price">от 22 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-sochi" 
+                                data-name="Тур в Сочи, Россия" 
+                                data-price="22000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/736x/e6/ef/ee/e6efee5a5046c41376b8899ccfbed01e.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Екатеринбург -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/eb/6f/18/eb6f181d0c389a6d94e741b5457fa3eb.jpg" alt="Екатеринбург">
@@ -339,8 +487,17 @@
                             <h3>Екатеринбург, Россия</h3>
                             <p class="duration">3 дня / 2 ночи</p>
                             <p class="price">от 11 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-ekb" 
+                                data-name="Тур в Екатеринбург, Россия" 
+                                data-price="11000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/eb/6f/18/eb6f181d0c389a6d94e741b5457fa3eb.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Новосибирск -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/736x/f2/64/a7/f264a70dc4604be8e29e26937401bca4.jpg" alt="Новосибирск">
@@ -349,8 +506,17 @@
                             <h3>Новосибирск, Россия</h3>
                             <p class="duration">4 дня / 3 ночи</p>
                             <p class="price">от 13 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-nsk" 
+                                data-name="Тур в Новосибирск, Россия" 
+                                data-price="13000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/736x/f2/64/a7/f264a70dc4604be8e29e26937401bca4.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Владивосток -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/b2/20/46/b220460210279d9cdae528e76c20404b.jpg" alt="Владивосток">
@@ -359,18 +525,36 @@
                             <h3>Владивосток, Россия</h3>
                             <p class="duration">5 дней / 4 ночи</p>
                             <p class="price">от 25 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-vladivostok" 
+                                data-name="Тур во Владивосток, Россия" 
+                                data-price="25000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/b2/20/46/b220460210279d9cdae528e76c20404b.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Йошкар-Ола -->
                     <div class="tour-card">
                         <div class="tour-image">
-                            <img src="https://s1.stc.all.kpcdn.net/russia/wp-content/uploads/2021/10/Marij-El-oblozhka-2.jpg" alt="Минск">
+                            <img src="https://s1.stc.all.kpcdn.net/russia/wp-content/uploads/2021/10/Marij-El-oblozhka-2.jpg" alt="Йошкар-Ола">
                         </div>
                         <div class="tour-info">
                             <h3>Йошкар-Ола, Россия</h3>
                             <p class="duration">3 дня / 2 ночи</p>
                             <p class="price">от 7 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-yoshkarola" 
+                                data-name="Тур в Йошкар-Олу, Россия" 
+                                data-price="7000" 
+                                data-type="Тур" 
+                                data-image="https://s1.stc.all.kpcdn.net/russia/wp-content/uploads/2021/10/Marij-El-oblozhka-2.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Астана -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/736x/31/e9/50/31e950b405a1e94816cf1579ed864049.jpg" alt="Астана">
@@ -379,8 +563,17 @@
                             <h3>Астана, Казахстан</h3>
                             <p class="duration">4 дня / 3 ночи</p>
                             <p class="price">от 16 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-astana" 
+                                data-name="Тур в Астану, Казахстан" 
+                                data-price="16000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/736x/31/e9/50/31e950b405a1e94816cf1579ed864049.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
+                    <!-- Ташкент -->
                     <div class="tour-card">
                         <div class="tour-image">
                             <img src="https://i.pinimg.com/1200x/a9/ed/1c/a9ed1cd34088f45eb6a0033159c07160.jpg" alt="Ташкент">
@@ -389,6 +582,14 @@
                             <h3>Ташкент, Узбекистан</h3>
                             <p class="duration">5 дней / 4 ночи</p>
                             <p class="price">от 21 000 ₽</p>
+                            <button class="add-to-cart-btn" 
+                                data-id="tour-tashkent" 
+                                data-name="Тур в Ташкент, Узбекистан" 
+                                data-price="21000" 
+                                data-type="Тур" 
+                                data-image="https://i.pinimg.com/1200x/a9/ed/1c/a9ed1cd34088f45eb6a0033159c07160.jpg">
+                                В корзину
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -441,6 +642,7 @@
         </div>
     </footer>
 
+    <script src="cart.js"></script>
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
