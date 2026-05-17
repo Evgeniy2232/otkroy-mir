@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Поиск и бронирование авиабилетов по всему миру. Сравните цены сотен авиакомпаний и выберите лучший рейс для вашего путешествия.">
+    <title>Направления - Открой мир</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="destinations.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=107732237', 'ym');
+        ym(107732237, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107732237" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBL321M1W8"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TBL321M1W8');</script>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo"><i class="fas fa-compass"></i> Открой мир</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown"><a href="#">Услуги <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trains.html"><i class="fas fa-train"></i> Ж/Д билеты</a>
+                        <a href="flights.html"><i class="fas fa-plane"></i> Авиабилеты</a>
+                        <a href="hotels.html"><i class="fas fa-hotel"></i> Отели</a>
+                        <a href="tours.html"><i class="fas fa-map-marked-alt"></i> Туры</a>
+                        <a href="buses.html"><i class="fas fa-bus"></i> Автобусы</a>
+                    </div>
+                </li>
+                <li><a href="destinations.html">Направления</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="login.html">Войти</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
+                <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <section class="service-hero">
+            <div class="service-hero-content">
+                <h1>Направления для путешествий</h1>
+                <p>Откройте для себя самые красивые уголки планеты. Выберите идеальное направление для вашего следующего приключения.</p>
+            </div>
+        </section>
+
+        <div class="destinations-page">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="europe">Европа</button>
+                <button class="filter-btn" data-filter="asia">Азия</button>
+                <button class="filter-btn" data-filter="america">Америка</button>
+                <button class="filter-btn" data-filter="russia">Россия</button>
+            </div>
+
+            <div class="destinations-grid">
+                <!-- Париж -->
+                <div class="destination-card" data-category="europe">
+                    <div class="destination-image"><img src="https://i.pinimg.com/736x/2e/30/fd/2e30fd25b46caa811e1ded84cdca3120.jpg" alt="Париж"><div class="destination-badge">Популярное</div></div>
+                    <div class="destination-content">
+                        <h3>Париж, Франция</h3>
+                        <div class="destination-location"><i class="fas fa-map-marker-alt"></i> Европа</div>
+                        <p class="destination-description">Город любви, света и искусства. Эйфелева башня, Лувр, собор Парижской Богоматери и уютные улочки Монмартра.</p>
+                        <div class="destination-features"><div class="feature"><i class="fas fa-umbrella-beach"></i><span>Пляжи</span></div><div class="feature"><i class="fas fa-landmark"></i><span>Музеи</span></div><div class="feature"><i class="fas fa-utensils"></i><span>Рестораны</span></div></div>
+                        <div class="destination-price"><span class="price">от 45 000 ₽</span><a href="flights.html" class="cta-button">Выбрать тур</a></div>
+                    </div>
+                </div>
+                <!-- Рим -->
+                <div class="destination-card" data-category="europe">
+                    <div class="destination-image"><img src="https://i.pinimg.com/736x/34/a8/b9/34a8b96ee490128a9e249bf70ca17227.jpg" alt="Рим"><div class="destination-badge">Вечный город</div></div>
+                    <div class="destination-content">
+                        <h3>Рим, Италия</h3>
+                        <div class="destination-location"><i class="fas fa-map-marker-alt"></i> Европа</div>
+                        <p class="destination-description">Колизей, Ватикан, фонтан Треви и неповторимая итальянская кухня. Город, где история оживает на каждом шагу.</p>
+                        <div class="destination-features"><div class="feature"><i class="fas fa-landmark"></i><span>История</span></div><div class="feature"><i class="fas fa-utensils"></i><span>Кухня</span></div><div class="feature"><i class="fas fa-shopping-bag"></i><span>Шопинг</span></div></div>
+                        <div class="destination-price"><span class="price">от 38 000 ₽</span><a href="flights.html" class="cta-button">Выбрать тур</a></div>
+                    </div>
+                </div>
+                <!-- Стамбул -->
+                <div class="destination-card" data-category="asia">
+                    <div class="destination-image"><img src="https://i.pinimg.com/1200x/51/22/cd/5122cd0d9565099bb4b322e70c0a9d65.jpg" alt="Стамбул"><div class="destination-badge">Два континента</div></div>
+                    <div class="destination-content">
+                        <h3>Стамбул, Турция</h3>
+                        <div class="destination-location"><i class="fas fa-map-marker-alt"></i> Азия / Европа</div>
+                        <p class="destination-description">Уникальный город на стыке двух континентов. Голубая мечеть, Айя-София, Гранд-базар и прогулки по Босфору.</p>
+                        <div class="destination-features"><div class="feature"><i class="fas fa-mosque"></i><span>Мечети</span></div><div class="feature"><i class="fas fa-ship"></i><span>Босфор</span></div><div class="feature"><i class="fas fa-shopping-cart"></i><span>Базары</span></div></div>
+                        <div class="destination-price"><span class="price">от 28 000 ₽</span><a href="flights.html" class="cta-button">Выбрать тур</a></div>
+                    </div>
+                </div>
+                <!-- Нью-Йорк -->
+                <div class="destination-card" data-category="america">
+                    <div class="destination-image"><img src="https://i.pinimg.com/1200x/c1/0e/1b/c10e1bb957a3379dbfc18f2c6b42799b.jpg" alt="Нью-Йорк"><div class="destination-badge">Большое яблоко</div></div>
+                    <div class="destination-content">
+                        <h3>Нью-Йорк, США</h3>
+                        <div class="destination-location"><i class="fas fa-map-marker-alt"></i> Северная Америка</div>
+                        <p class="destination-description">Город, который никогда не спит. Статуя Свободы, Таймс-сквер, Центральный парк и небоскребы Манхэттена.</p>
+                        <div class="destination-features"><div class="feature"><i class="fas fa-city"></i><span>Небоскребы</span></div><div class="feature"><i class="fas fa-tree"></i><span>Парки</span></div><div class="feature"><i class="fas fa-music"></i><span>Бродвей</span></div></div>
+                        <div class="destination-price"><span class="price">от 89 000 ₽</span><a href="flights.html" class="cta-button">Выбрать тур</a></div>
+                    </div>
+                </div>
+                <!-- Бангкок -->
+                <div class="destination-card" data-category="asia">
+                    <div class="destination-image"><img src="https://i.pinimg.com/1200x/72/fb/df/72fbdfa013d8fa9f9696181daf6b294b.jpg" alt="Бангкок"><div class="destination-badge">Экзотика</div></div>
+                    <div class="destination-content">
+                        <h3>Бангкок, Таиланд</h3>
+                        <div class="destination-location"><i class="fas fa-map-marker-alt"></i> Азия</div>
+                        <p class="destination-description">Королевские дворцы, буддийские храмы, плавучие рынки и невероятная уличная еда. Ворота в Юго-Восточную Азию.</p>
+                        <div class="destination-features"><div class="feature"><i class="fas fa-temple"></i><span>Храмы</span></div><div class="feature"><i class="fas fa-utensils"></i><span>Уличная еда</span></div><div class="feature"><i class="fas fa-water"></i><span>Реки</span></div></div>
+                        <div class="destination-price"><span class="price">от 42 000 ₽</span><a href="flights.html" class="cta-button">Выбрать тур</a></div>
+                    </div>
+                </div>
+                <!-- Санкт-Петербург -->
+                <div class="destination-card" data-category="russia">
+                    <div class="destination-image"><img src="https://i.pinimg.com/736x/68/af/2e/68af2e15f7cdd5b33dba273ff41cd6c1.jpg" alt="Санкт-Петербург"><div class="destination-badge">Северная Венеция</div></div>
+                    <div class="destination-content">
+                        <h3>Санкт-Петербург, Россия</h3>
+                        <div class="destination-location"><i class="fas fa-map-marker-alt"></i> Россия</div>
+                        <p class="destination-description">Город белых ночей, разводных мостов и величественных дворцов. Эрмитаж, Петергоф и неповторимая архитектура.</p>
+                        <div class="destination-features"><div class="feature"><i class="fas fa-palace"></i><span>Дворцы</span></div><div class="feature"><i class="fas fa-bridge"></i><span>Мосты</span></div><div class="feature"><i class="fas fa-museum"></i><span>Музеи</span></div></div>
+                        <div class="destination-price"><span class="price">от 15 000 ₽</span><a href="trains.html" class="cta-button">Выбрать тур</a></div>
+                    </div>
+                </div>
+                <!-- Лондон -->
+                <div class="destination-card" data-category="europe">
+                    <div class="destination-image"><img src="https://i.pinimg.com/736x/d3/5f/0d/d35f0d7b405b087bb1cdf71f0989820c.jpg" alt="Лондон"><div class="destination-badge">Королевский</div></div>
+                    <div class="destination-content">
+                        <h3>Лондон, Великобритания</h3>
+                        <div class="destination-location"><i class="fas fa-map-marker-alt"></i> Европа</div>
+                        <p class="destination-description">Биг-Бен, Букингемский дворец, Тауэр и Лондонский глаз. Классика и современность в одном флаконе.</p>
+                        <div class="destination-features"><div class="feature"><i class="fas fa-crown"></i><span>Королевское</span></div><div class="feature"><i class="fas fa-subway"></i><span>Метро</span></div><div class="feature"><i class="fas fa-theater-masks"></i><span>Театры</span></div></div>
+                        <div class="destination-price"><span class="price">от 52 000 ₽</span><a href="flights.html" class="cta-button">Выбрать тур</a></div>
+                    </div>
+                </div>
+                <!-- Токио -->
+                <div class="destination-card" data-category="asia">
+                    <div class="destination-image"><img src="https://i.pinimg.com/1200x/1e/0b/bf/1e0bbf90534371663cac5d42f8d7e0fc.jpg" alt="Токио"><div class="destination-badge">Футуризм</div></div>
+                    <div class="destination-content">
+                        <h3>Токио, Япония</h3>
+                        <div class="destination-location"><i class="fas fa-map-marker-alt"></i> Азия</div>
+                        <p class="destination-description">Неоновые огни, древние храмы, сакура и самая вкусная рамен. Город будущего с тысячелетней историей.</p>
+                        <div class="destination-features"><div class="feature"><i class="fas fa-robot"></i><span>Технологии</span></div><div class="feature"><i class="fas fa-tree"></i><span>Сакура</span></div><div class="feature"><i class="fas fa-egg"></i><span>Суши</span></div></div>
+                        <div class="destination-price"><span class="price">от 78 000 ₽</span><a href="flights.html" class="cta-button">Выбрать тур</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="regions">
+                <h2 class="section-title">Популярные регионы</h2>
+                <div class="regions-grid">
+                    <div class="region-card"><div class="region-image"><img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Европа"></div><div class="region-content"><h3>Европа</h3><p class="region-count">24 направления</p></div></div>
+                    <div class="region-card"><div class="region-image"><img src="https://images.unsplash.com/photo-1535139262971-c51845709a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Азия"></div><div class="region-content"><h3>Азия</h3><p class="region-count">18 направлений</p></div></div>
+                    <div class="region-card"><div class="region-image"><img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1332&q=80" alt="Америка"></div><div class="region-content"><h3>Америка</h3><p class="region-count">12 направлений</p></div></div>
+                    <div class="region-card"><div class="region-image"><img src="https://images.unsplash.com/photo-1531525645387-7f14be1bdbbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Россия"></div><div class="region-content"><h3>Россия</h3><p class="region-count">32 направления</p></div></div>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <div class="newsletter-content">
+                    <h2>Получайте лучшие предложения</h2>
+                    <p>Подпишитесь на нашу рассылку и первыми узнавайте о новых турах и специальных акциях.</p>
+                    <form class="newsletter-form"><input type="email" class="newsletter-input" placeholder="Ваш email" required><button type="submit" class="newsletter-button">Подписаться</button></form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column"><h3>Открой мир</h3><p>Мы помогаем путешественникам открывать мир с новой стороны, создавая незабываемые впечатления и уникальные маршруты.</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+            <div class="footer-column"><h3>Услуги</h3><ul class="footer-links"><li><a href="trains.html">Ж/Д билеты</a></li><li><a href="flights.html">Авиабилеты</a></li><li><a href="hotels.html">Отели</a></li><li><a href="tours.html">Туры</a></li><li><a href="buses.html">Автобусы</a></li></ul></div>
+            <div class="footer-column"><h3>Поддержка</h3><ul class="footer-links"><li><a href="#">Центр помощи</a></li><li><a href="#">Свяжитесь с нами</a></li><li><a href="#">Условия использования</a></li><li><a href="#">Политика конфиденциальности</a></li></ul></div>
+            <div class="footer-column"><h3>Контакты</h3><ul class="footer-links"><li><i class="fas fa-map-marker-alt"></i> Москва, ул. Путешественников, 15</li><li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li><li><i class="fas fa-envelope"></i> info@wanderlust.ru</li></ul></div>
+        </div>
+        <div class="copyright"><p>&copy; 2025 Открой мир. Все права защищены.</p></div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() { document.querySelector('.nav-links').classList.toggle('active'); });
+        window.addEventListener('scroll', function() { const header = document.getElementById('header'); if (window.scrollY > 50) header.classList.add('header-scrolled'); else header.classList.remove('header-scrolled'); });
+        // Фильтрация карточек
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.destination-card');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.dataset.filter;
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) card.style.display = 'block';
+                    else card.style.display = 'none';
+                });
+            });
+        });
+        // Анимация появления карточек
+        function checkVisibility() {
+            cards.forEach((card, index) => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) setTimeout(() => card.classList.add('visible'), index * 100);
+            });
+        }
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility);
+        // Подписка
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) { e.preventDefault(); alert('Спасибо за подписку!'); });
+    </script>
+</body>
+</html>

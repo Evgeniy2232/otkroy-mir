@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - Открой мир</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reviews.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="robots" content="index, follow">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=107732237', 'ym');
+        ym(107732237, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107732237" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBL321M1W8"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TBL321M1W8');</script>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo"><i class="fas fa-compass"></i> Открой мир</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown"><a href="#">Услуги <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trains.html"><i class="fas fa-train"></i> Ж/Д билеты</a>
+                        <a href="flights.html"><i class="fas fa-plane"></i> Авиабилеты</a>
+                        <a href="hotels.html"><i class="fas fa-hotel"></i> Отели</a>
+                        <a href="tours.html"><i class="fas fa-map-marked-alt"></i> Туры</a>
+                        <a href="buses.html"><i class="fas fa-bus"></i> Автобусы</a>
+                    </div>
+                </li>
+                <li><a href="destinations.html">Направления</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="login.html">Войти</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
+                <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <!-- Убрал лишний page-container, так как отступ уже на body -->
+    <div class="reviews">
+        <section class="service-hero">
+            <div class="service-hero-content">
+                <h1>Отзывы наших клиентов</h1>
+                <p>Узнайте, что говорят путешественники о наших услугах. Ваше мнение помогает нам становиться лучше!</p>
+            </div>
+        </section>
+
+        <div class="reviews-stats" id="stats-container">
+            <div class="stat-item"><div class="stat-number" id="avgRating">4.8</div><div class="stat-label">Средняя оценка</div></div>
+            <div class="stat-item"><div class="stat-number" id="totalReviews">0</div><div class="stat-label">Отзывов</div></div>
+            <div class="stat-item"><div class="stat-number" id="recommendPercent">96%</div><div class="stat-label">Рекомендуют нас</div></div>
+        </div>
+
+        <div class="reviews-grid" id="reviews-grid"></div>
+
+        <div class="add-review">
+            <h2 class="section-title">Оставьте свой отзыв</h2>
+            <form id="review-form">
+                <div class="form-row">
+                    <div class="form-group"><label for="reviewer-name">Ваше имя</label><input type="text" id="reviewer-name" placeholder="Как к вам обращаться?" required></div>
+                    <div class="form-group"><label for="reviewer-location">Ваш город</label><input type="text" id="reviewer-location" placeholder="Где вы живете?" required></div>
+                </div>
+                <div class="form-group"><label for="review-service">Услуга</label><select id="review-service" required><option value="">Выберите услугу</option><option value="Ж/Д билеты">Ж/Д билеты</option><option value="Авиабилеты">Авиабилеты</option><option value="Отели">Отели</option><option value="Туры">Туры</option><option value="Автобусы">Автобусы</option></select></div>
+                <div class="form-group"><label>Ваша оценка</label><div class="rating-input"><span class="rating-star" data-rating="1"><i class="far fa-star"></i></span><span class="rating-star" data-rating="2"><i class="far fa-star"></i></span><span class="rating-star" data-rating="3"><i class="far fa-star"></i></span><span class="rating-star" data-rating="4"><i class="far fa-star"></i></span><span class="rating-star" data-rating="5"><i class="far fa-star"></i></span></div><input type="hidden" id="rating-value" required></div>
+                <div class="form-group"><label for="review-text">Ваш отзыв</label><textarea id="review-text" placeholder="Поделитесь своими впечатлениями..." required></textarea></div>
+                <button type="submit" class="cta-button">Опубликовать отзыв</button>
+            </form>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column"><h3>Открой мир</h3><p>Мы помогаем путешественникам открывать мир с новой стороны, создавая незабываемые впечатления и уникальные маршруты.</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+            <div class="footer-column"><h3>Услуги</h3><ul class="footer-links"><li><a href="trains.html">Ж/Д билеты</a></li><li><a href="flights.html">Авиабилеты</a></li><li><a href="hotels.html">Отели</a></li><li><a href="tours.html">Туры</a></li><li><a href="buses.html">Автобусы</a></li></ul></div>
+            <div class="footer-column"><h3>Поддержка</h3><ul class="footer-links"><li><a href="#">Центр помощи</a></li><li><a href="#">Свяжитесь с нами</a></li><li><a href="#">Условия использования</a></li><li><a href="#">Политика конфиденциальности</a></li></ul></div>
+            <div class="footer-column"><h3>Контакты</h3><ul class="footer-links"><li><i class="fas fa-map-marker-alt"></i> Москва, ул. Путешественников, 15</li><li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li><li><i class="fas fa-envelope"></i> info@wanderlust.ru</li></ul></div>
+        </div>
+        <div class="copyright"><p>&copy; 2025 Открой мир. Все права защищены.</p></div>
+    </footer>
+
+    <script>
+        // ----- Управление отзывами через localStorage -----
+        let reviews = [];
+
+        const defaultReviews = [
+            { name: "Анна", location: "Москва", service: "Туры", rating: 5, text: "Путешествие с Wanderlust превзошло все мои ожидания! Организация была безупречной, а гид помог открыть нам настоящую душу страны. Особенно впечатлила экскурсия по старинным улочкам Праги - мы увидели места, куда редко добираются туристы.", date: "15 мая 2023" },
+            { name: "Дмитрий", location: "Санкт-Петербург", service: "Отели", rating: 5, text: "Я много путешествовал, но такой уровень сервиса встретил впервые. Каждая деталь была продумана, и я смог полностью погрузиться в атмосферу места. Отдельное спасибо за помощь с бронированием отеля - оказался именно таким, как на фото!", date: "2 июня 2023" },
+            { name: "Елена", location: "Казань", service: "Авиабилеты", rating: 4, text: "Маршрут был составлен идеально! Мы увидели не только популярные достопримечательности, но и те места, куда редко добираются туристы. Невероятный опыт! Единственное, хотелось бы больше свободного времени для самостоятельных прогулок.", date: "28 апреля 2023" },
+            { name: "Алексей", location: "Екатеринбург", service: "Ж/Д билеты", rating: 5, text: "Заказывал ж/д билеты через Wanderlust. Процесс занял всего несколько минут, цены оказались даже ниже, чем на сайте перевозчика. Очень удобно, что все билеты хранятся в личном кабинете и их не нужно распечатывать.", date: "10 июля 2023" },
+            { name: "Ольга", location: "Новосибирск", service: "Автобусы", rating: 5, text: "Пользовалась сервисом для бронирования автобусных билетов. Все прошло гладко, никаких проблем с посадкой. Особенно порадовала возможность выбрать конкретное место в автобусе. Теперь буду пользоваться только вашим сервисом!", date: "22 марта 2023" }
+        ];
+
+        function loadReviews() {
+            const stored = localStorage.getItem('travelReviews');
+            if (stored) {
+                reviews = JSON.parse(stored);
+            } else {
+                reviews = [...defaultReviews];
+                saveReviews();
+            }
+            renderReviews();
+            updateStats();
+        }
+
+        function saveReviews() {
+            localStorage.setItem('travelReviews', JSON.stringify(reviews));
+        }
+
+        function addReview(review) {
+            reviews.unshift(review);
+            saveReviews();
+            renderReviews();
+            updateStats();
+        }
+
+        function renderReviews() {
+            const container = document.getElementById('reviews-grid');
+            if (!container) return;
+            if (reviews.length === 0) {
+                container.innerHTML = '<div class="review-card" style="grid-column:1/-1; text-align:center; padding:2rem;">Пока нет отзывов. Будьте первым!</div>';
+                return;
+            }
+            let html = '';
+            reviews.forEach((rev, idx) => {
+                let stars = '';
+                for (let i = 1; i <= 5; i++) {
+                    stars += i <= rev.rating ? '<i class="fas fa-star"></i>' : '<i class="far fa-star"></i>';
+                }
+                const randomGender = Math.random() > 0.5 ? 'women' : 'men';
+                const randomId = Math.floor(Math.random() * 99) + 1;
+                html += `
+                    <div class="review-card" data-idx="${idx}">
+                        <div class="review-header">
+                            <img src="https://randomuser.me/api/portraits/${randomGender}/${randomId}.jpg" alt="${escapeHtml(rev.name)}" class="review-avatar">
+                            <div class="reviewer-info">
+                                <h3>${escapeHtml(rev.name)}, ${escapeHtml(rev.location)}</h3>
+                                <div class="review-date">${rev.date}</div>
+                                <div class="review-rating">${stars}</div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">"${escapeHtml(rev.text)}"</p>
+                            <span class="review-service">${escapeHtml(rev.service)}</span>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+            document.querySelectorAll('.review-card').forEach((card, i) => {
+                setTimeout(() => card.classList.add('visible'), i * 100);
+            });
+        }
+
+        function updateStats() {
+            const total = reviews.length;
+            const sumRating = reviews.reduce((acc, r) => acc + r.rating, 0);
+            const avg = total > 0 ? (sumRating / total).toFixed(1) : 0;
+            const recommendCount = reviews.filter(r => r.rating >= 4).length;
+            const recommendPercent = total > 0 ? Math.round((recommendCount / total) * 100) : 0;
+            document.getElementById('avgRating').innerText = avg;
+            document.getElementById('totalReviews').innerText = total;
+            document.getElementById('recommendPercent').innerText = recommendPercent + '%';
+        }
+
+        function getCurrentDate() {
+            const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+            const now = new Date();
+            return `${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadReviews();
+
+            document.querySelector('.menu-toggle').addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.toggle('active');
+            });
+            window.addEventListener('scroll', () => {
+                const header = document.getElementById('header');
+                if (window.scrollY > 50) header.classList.add('header-scrolled');
+                else header.classList.remove('header-scrolled');
+            });
+
+            const stars = document.querySelectorAll('.rating-star');
+            const ratingInput = document.getElementById('rating-value');
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const rating = parseInt(star.dataset.rating);
+                    ratingInput.value = rating;
+                    stars.forEach(s => {
+                        const starRating = parseInt(s.dataset.rating);
+                        if (starRating <= rating) {
+                            s.classList.add('active');
+                            s.querySelector('i').classList.remove('far');
+                            s.querySelector('i').classList.add('fas');
+                        } else {
+                            s.classList.remove('active');
+                            s.querySelector('i').classList.remove('fas');
+                            s.querySelector('i').classList.add('far');
+                        }
+                    });
+                });
+            });
+
+            const form = document.getElementById('review-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('reviewer-name').value.trim();
+                const location = document.getElementById('reviewer-location').value.trim();
+                const service = document.getElementById('review-service').value;
+                const rating = parseInt(ratingInput.value);
+                const text = document.getElementById('review-text').value.trim();
+                if (!name || !location || !service || !rating || !text) {
+                    alert('Пожалуйста, заполните все поля и поставьте оценку');
+                    return;
+                }
+                const newReview = {
+                    name: name,
+                    location: location,
+                    service: service,
+                    rating: rating,
+                    text: text,
+                    date: getCurrentDate()
+                };
+                addReview(newReview);
+                form.reset();
+                ratingInput.value = '';
+                stars.forEach(s => {
+                    s.classList.remove('active');
+                    s.querySelector('i').classList.remove('fas');
+                    s.querySelector('i').classList.add('far');
+                });
+                alert('Спасибо за ваш отзыв!');
+            });
+        });
+    </script>
+</body>
+</html>

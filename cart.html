@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ваша корзина покупок на Открой мир. Просмотр выбранных авиабилетов, отелей, туров и Ж/Д билетов. Оформление заказа в несколько кликов.">
+    <title>Корзина - Открой мир</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Yandex.Metrika и Google Analytics (как на других страницах) -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=107732237', 'ym');
+        ym(107732237, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107732237" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TBL321M1W8"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TBL321M1W8');</script>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo"><i class="fas fa-compass"></i> Открой мир</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#">Услуги <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trains.html"><i class="fas fa-train"></i> Ж/Д билеты</a>
+                        <a href="flights.html"><i class="fas fa-plane"></i> Авиабилеты</a>
+                        <a href="hotels.html"><i class="fas fa-hotel"></i> Отели</a>
+                        <a href="tours.html"><i class="fas fa-map-marked-alt"></i> Туры</a>
+                        <a href="buses.html"><i class="fas fa-bus"></i> Автобусы</a>
+                    </div>
+                </li>
+                <li><a href="destinations.html">Направления</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="login.html">Войти</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
+                <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <section class="cart-page">
+            <h1><i class="fas fa-shopping-cart"></i> Моя корзина</h1>
+            <div class="cart-container">
+                <div id="cart-items-container" class="cart-items-list">
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart fa-4x"></i>
+                        <p>Ваша корзина пуста</p>
+                        <a href="index.html" class="cta-button">Перейти к покупкам</a>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h3>Итого</h3>
+                    <div class="summary-row">
+                        <span>Товары:</span>
+                        <span id="cart-total">0 ₽</span>
+                    </div>
+                    <form id="promo-form" class="promo-form">
+                        <input type="text" id="promo-code" placeholder="Промокод">
+                        <button type="submit">Применить</button>
+                    </form>
+                    <button id="checkout-btn" class="checkout-btn">Оформить заказ</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column"><h3>Открой мир</h3><p>Мы помогаем путешественникам открывать мир с новой стороны...</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+            <div class="footer-column"><h3>Услуги</h3><ul class="footer-links"><li><a href="trains.html">Ж/Д билеты</a></li><li><a href="flights.html">Авиабилеты</a></li><li><a href="hotels.html">Отели</a></li><li><a href="tours.html">Туры</a></li><li><a href="buses.html">Автобусы</a></li></ul></div>
+            <div class="footer-column"><h3>Поддержка</h3><ul class="footer-links"><li><a href="#">Центр помощи</a></li><li><a href="#">Свяжитесь с нами</a></li><li><a href="#">Условия использования</a></li><li><a href="#">Политика конфиденциальности</a></li></ul></div>
+            <div class="footer-column"><h3>Контакты</h3><ul class="footer-links"><li><i class="fas fa-map-marker-alt"></i> Москва, ул. Путешественников, 15</li><li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li><li><i class="fas fa-envelope"></i> info@wanderlust.ru</li></ul></div>
+        </div>
+        <div class="copyright"><p>&copy; 2023 Открой мир. Все права защищены.</p></div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('active'));
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) header.classList.add('header-scrolled');
+            else header.classList.remove('header-scrolled');
+        });
+    </script>
+</body>
+</html>

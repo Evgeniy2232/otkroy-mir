@@ -1,0 +1,129 @@
+:root {
+    --primary: #2A9D8F;
+    --secondary: #E9C46A;
+    --accent: #E76F51;
+    --dark: #264653;
+    --light: #F4F1DE;
+    --text: #333333;
+}
+
+.service-hero {
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://proza.ru/pics/2023/01/24/1907.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.service-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.service-hero p { font-size: 1.2rem; }
+.service-details { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark);
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+.service-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.service-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.service-image img { width: 100%; transition: transform 0.5s; }
+.service-image:hover img { transform: scale(1.05); }
+.service-description h2 { color: var(--dark); margin-bottom: 1.5rem; }
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.feature-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    text-align: center;
+}
+.feature-item:hover { transform: translateY(-5px); }
+.feature-item i { color: var(--primary); font-size: 1.5rem; margin-bottom: 1rem; }
+.booking-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--dark); }
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.cta-button {
+    background: var(--accent);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.cta-button:hover { background: var(--primary); transform: translateY(-3px); }
+.cities-section { margin-top: 5rem; }
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+.city-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.city-card:hover { transform: translateY(-5px); }
+.city-image { height: 180px; overflow: hidden; }
+.city-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.city-card:hover .city-image img { transform: scale(1.1); }
+.city-info { padding: 1.5rem; }
+.city-info h3 { color: var(--dark); margin-bottom: 0.5rem; }
+.route { color: #666; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.price { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+@media (max-width: 1200px) { .cities-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) {
+    .service-hero h1 { font-size: 2.5rem; }
+    .service-info { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .cities-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) { .cities-grid { grid-template-columns: 1fr; } }

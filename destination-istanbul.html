@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Стамбул – город двух континентов. Узнайте о достопримечательностях, погоде, лучших отелях и экскурсиях. Планируйте путешествие с нами!">
+    <title>Стамбул, Турция - Открой мир</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Дополнительные стили только для этой страницы */
+        .destination-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://i.pinimg.com/1200x/51/22/cd/5122cd0d9565099bb4b322e70c0a9d65.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 0; /* отступ уже есть на body */
+        }
+        .destination-hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        .destination-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .description-section {
+            margin-bottom: 3rem;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+        .attractions, .weather, .offers {
+            margin-bottom: 3rem;
+        }
+        .attractions-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .attraction-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .attraction-item i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        .weather-info {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .offer-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .offer-card:hover {
+            transform: translateY(-5px);
+        }
+        .offer-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .offer-card .info {
+            padding: 1rem;
+        }
+        .offer-card h3 {
+            margin-bottom: 0.5rem;
+        }
+        .offer-card .price {
+            color: var(--accent);
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        .btn-small {
+            background: var(--accent);
+            color: white;
+            padding: 0.4rem 1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .btn-small:hover {
+            background: var(--primary);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--dark);
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        @media (max-width: 768px) {
+            .destination-hero h1 { font-size: 2rem; }
+            .gallery { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo"><i class="fas fa-compass"></i> Открой мир</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                    <a href="#">Услуги <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="trains.html"><i class="fas fa-train"></i> Ж/Д билеты</a>
+                        <a href="flights.html"><i class="fas fa-plane"></i> Авиабилеты</a>
+                        <a href="hotels.html"><i class="fas fa-hotel"></i> Отели</a>
+                        <a href="tours.html"><i class="fas fa-map-marked-alt"></i> Туры</a>
+                        <a href="buses.html"><i class="fas fa-bus"></i> Автобусы</a>
+                    </div>
+                </li>
+                <li><a href="destinations.html">Направления</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="login.html">Войти</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
+                <li><a href="admin.html" class="admin-link"><i class="fas fa-cog"></i> Админ-панель</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <div class="destination-hero">
+        <h1>Стамбул, Турция</h1>
+    </div>
+
+    <div class="destination-content">
+        <a href="flights.html" class="back-link"><i class="fas fa-arrow-left"></i> Назад к авиабилетам</a>
+
+        <div class="description-section">
+            <h2 class="section-title">Где встречаются Европа и Азия</h2>
+            <p>Стамбул – уникальный мегаполис, раскинувшийся на двух континентах. Город, который был столицей Византийской, Римской и Османской империй, сегодня поражает смесью культур, архитектуры и атмосферы. Здесь древние храмы соседствуют с современными небоскребами, а шумные базары – с тихими чайными садами. Это идеальное направление для тех, кто хочет прикоснуться к истории, насладиться восточной кухней и увидеть живописные виды Босфора.</p>
+        </div>
+
+        <h2 class="section-title">Фотогалерея</h2>
+        <div class="gallery">
+            <img src="https://i.pinimg.com/1200x/51/22/cd/5122cd0d9565099bb4b322e70c0a9d65.jpg" alt="Стамбул панорама">
+            <img src="https://i.pinimg.com/originals/b3/5f/6f/b35f6f07cf725c48779a1b42e78b1192.jpg" alt="Собор Святой Софии">
+            <img src="https://i.pinimg.com/originals/31/4c/41/314c4193f12246d0f85ac1f583a6cd9a.jpg" alt="Голубая мечеть">
+            <img src="https://i.pinimg.com/originals/2b/a2/2c/2ba22cafb0b48925771c653f77c702a8.jpg" alt="Вид на Босфор">
+        </div>
+
+        <div class="attractions">
+            <h2 class="section-title">Главные достопримечательности</h2>
+            <div class="attractions-list">
+                <div class="attraction-item"><i class="fas fa-mosque"></i> <div><strong>Собор Святой Софии</strong><br>Шедевр византийской архитектуры</div></div>
+                <div class="attraction-item"><i class="fas fa-landmark"></i> <div><strong>Голубая мечеть</strong><br>Шесть минаретов, голубые изразцы</div></div>
+                <div class="attraction-item"><i class="fas fa-palace"></i> <div><strong>Топкапы</strong><br>Дворец османских султанов</div></div>
+                <div class="attraction-item"><i class="fas fa-water"></i> <div><strong>Босфор</strong><br>Прогулка на кораблике между континентами</div></div>
+                <div class="attraction-item"><i class="fas fa-shopping-cart"></i> <div><strong>Гранд-базар</strong><br>Один из старейших крытых рынков мира</div></div>
+                <div class="attraction-item"><i class="fas fa-bath"></i> <div><strong>Римская цистерна</strong><br>Древнее подземное водохранилище</div></div>
+            </div>
+        </div>
+
+        <div class="weather">
+            <h2 class="section-title">Когда лучше ехать?</h2>
+            <div class="weather-info">
+                <p><i class="fas fa-sun"></i> <strong>Весна (апрель-май) и осень (сентябрь-октябрь)</strong> – идеальное время: +18..25°C, мало дождей.</p>
+                <p><i class="fas fa-umbrella"></i> <strong>Лето (июнь-август)</strong> – жарко (+30°C и выше), много туристов.</p>
+                <p><i class="fas fa-snowflake"></i> <strong>Зима (декабрь-февраль)</strong> – прохладно (+5..10°C), возможны дожди и снег, но меньше туристов и ниже цены.</p>
+            </div>
+        </div>
+
+        <div class="offers">
+            <h2 class="section-title">Популярные отели в Стамбуле</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/244141057.jpg?k=5c3d2e3a6f7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d" alt="Отель в Султанахмете">
+                    <div class="info">
+                        <h3>Hotel Sultanahmet</h3>
+                        <p>Рядом с Голубой мечетью, отличные отзывы</p>
+                        <div class="price">от 4 500 ₽ / ночь</div>
+                        <button class="add-to-cart-btn btn-small" data-id="hotel-istanbul-sultan" data-name="Отель Sultanahmet, Стамбул" data-price="4500" data-type="Отель" data-image="https://cf.bstatic.com/xdata/images/hotel/max1024x768/244141057.jpg?k=5c3d2e3a6f7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d">В корзину</button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/260310079.jpg?k=7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e" alt="Вид на Босфор">
+                    <div class="info">
+                        <h3>Bosphorus Palace Hotel</h3>
+                        <p>Люкс с видом на пролив, завтрак включён</p>
+                        <div class="price">от 8 900 ₽ / ночь</div>
+                        <button class="add-to-cart-btn btn-small" data-id="hotel-istanbul-bosphorus" data-name="Отель Bosphorus Palace, Стамбул" data-price="8900" data-type="Отель" data-image="https://cf.bstatic.com/xdata/images/hotel/max1024x768/260310079.jpg?k=7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e">В корзину</button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/156322545.jpg?k=9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b" alt="Бюджетный вариант">
+                    <div class="info">
+                        <h3>Cheap Istanbul Hostel</h3>
+                        <p>Недорого, центр города, хостел</p>
+                        <div class="price">от 1 200 ₽ / ночь</div>
+                        <button class="add-to-cart-btn btn-small" data-id="hotel-istanbul-hostel" data-name="Хостел в Стамбуле" data-price="1200" data-type="Отель" data-image="https://cf.bstatic.com/xdata/images/hotel/max1024x768/156322545.jpg?k=9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offers">
+            <h2 class="section-title">Популярные экскурсии</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/3b/2e/2e/photo0jpg.jpg?w=1200&h=-1&s=1" alt="Обзорная экскурсия">
+                    <div class="info">
+                        <h3>Обзорный тур по Стамбулу</h3>
+                        <p>Ая-София, Голубая мечеть, Гранд-базар</p>
+                        <div class="price">от 2 500 ₽</div>
+                        <button class="add-to-cart-btn btn-small" data-id="excursion-istanbul-sightseeing" data-name="Обзорная экскурсия по Стамбулу" data-price="2500" data-type="Экскурсия" data-image="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/3b/2e/2e/photo0jpg.jpg?w=1200&h=-1&s=1">В корзину</button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <img src="https://www.istanbul.com/images/upload/2019/06/princes-islands-tour-1.jpg" alt="Принцевы острова">
+                    <div class="info">
+                        <h3>Круиз на Принцевы острова</h3>
+                        <p>Прогулка на корабле, обед, купание</p>
+                        <div class="price">от 3 200 ₽</div>
+                        <button class="add-to-cart-btn btn-small" data-id="excursion-istanbul-princes" data-name="Круиз на Принцевы острова" data-price="3200" data-type="Экскурсия" data-image="https://www.istanbul.com/images/upload/2019/06/princes-islands-tour-1.jpg">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column"><h3>Открой мир</h3><p>Мы помогаем путешественникам открывать мир с новой стороны, создавая незабываемые впечатления и уникальные маршруты.</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+            <div class="footer-column"><h3>Услуги</h3><ul class="footer-links"><li><a href="trains.html">Ж/Д билеты</a></li><li><a href="flights.html">Авиабилеты</a></li><li><a href="hotels.html">Отели</a></li><li><a href="tours.html">Туры</a></li><li><a href="buses.html">Автобусы</a></li></ul></div>
+            <div class="footer-column"><h3>Поддержка</h3><ul class="footer-links"><li><a href="#">Центр помощи</a></li><li><a href="#">Свяжитесь с нами</a></li><li><a href="#">Условия использования</a></li><li><a href="#">Политика конфиденциальности</a></li></ul></div>
+            <div class="footer-column"><h3>Контакты</h3><ul class="footer-links"><li><i class="fas fa-map-marker-alt"></i> Москва, ул. Путешественников, 15</li><li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li><li><i class="fas fa-envelope"></i> info@wanderlust.ru</li></ul></div>
+        </div>
+        <div class="copyright"><p>&copy; 2025 Открой мир. Все права защищены.</p></div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) header.classList.add('header-scrolled');
+            else header.classList.remove('header-scrolled');
+        });
+    </script>
+</body>
+</html>
